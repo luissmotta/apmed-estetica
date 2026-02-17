@@ -16,7 +16,7 @@
             rel="stylesheet">
     </noscript>
     <!-- Hero Image Preload (LCP) -->
-    <link rel="preload" as="image" type="image/webp" href="/apmed-estetica/imagens/hero-bg.webp">
+    <!-- Hero Image (LCP optimized in body) -->
     <!-- AOS CSS (Async) -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" media="print" onload="this.media='all'">
     <!-- intl-tel-input CSS (Async) -->
@@ -49,7 +49,11 @@
         </nav>
     </div> <!-- Hero Section -->
     <section class="hero">
-        <div class="hero-bg"></div>
+        <img src="/.netlify/images?url=/apmed-estetica/imagens/hero-bg.webp&w=1920" srcset="/.netlify/images?url=/apmed-estetica/imagens/hero-bg.webp&w=600 600w, 
+                 /.netlify/images?url=/apmed-estetica/imagens/hero-bg.webp&w=1200 1200w, 
+                 /.netlify/images?url=/apmed-estetica/imagens/hero-bg.webp&w=1920 1920w" sizes="100vw"
+            alt="Ambiente da Clínica Apmed Estética" class="hero-bg-img" width="1920" height="1080" fetchpriority="high"
+            decoding="async">
         <div class="hero-overlay"></div>
         <div class="container hero-content">
             <div class="hero-bottom">
