@@ -154,9 +154,9 @@ onFirstInteraction(async () => {
             AOS.init({
                 once: true,
                 disableMutationObserver: true, // CLS Prevention
-                offset: 120,
-                duration: 800,
-                easing: 'ease-out-cubic'
+                offset: window.innerWidth < 768 ? 50 : 120,
+                duration: 1000,
+                easing: 'ease-out-quart'
             });
             setTimeout(() => AOS.refresh(), 500); // Ensure elements are found
         }
