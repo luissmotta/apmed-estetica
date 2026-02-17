@@ -1,0 +1,2426 @@
+/* =========================== APMED STETICA - STYLE.CSS Especificacao completa do layout.md =========================== */
+/* --- Variables & Reset --- */
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    /* Colors */
+    --color-bg: #f0f0f0;
+    --color-text: #00000;
+    --color-text-light: #000;
+    --color-primary: #9E7C3A;
+    --color-primary-dark: #846730;
+    --color-primary-light: #C9A55A;
+    --color-primary-lighter: #DBBF7A;
+    --color-primary-glow: rgba(158, 124, 58, 0.35);
+    --color-accent: #F5F5F0;
+    --color-white: #FFFFFF;
+    --color-dark: #1A1A2E;
+    --color-footer: #0a0a14;
+    /* Fonts */
+    --font-main: 'Karla', sans-serif;
+    /* Spacing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 4rem;
+    --spacing-xl: 8rem;
+    /* Layout */
+    --container-width: 1200px;
+    --header-height: 80px;
+    /* Effects */
+    --glass-bg: rgba(255, 255, 255, 0.1);
+    --glass-border: rgba(255, 255, 255, 0.2);
+    --glass-blur: 12px;
+    --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+
+
+/* --- Typography --- */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 1.5px;
+}
+
+/* --- Layout Utilities --- */
+.container {
+    margin: 0 auto;
+    width: 90%;
+    max-width: var(--container-width);
+
+}
+
+.section {
+    contain: layout paint;
+}
+
+/* --- Gold Text Gradient --- */
+.text-gold {
+    background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-primary-lighter) 40%, var(--color-primary-light) 60%, var(--color-primary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 800;
+    filter: drop-shadow(0 0 20px rgba(201, 165, 90, 0.4));
+}
+
+/* --- Buttons --- */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 32px;
+    font-family: var(--font-main);
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.82rem;
+    border-radius: 4px;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    border: none;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
+    transition: left 0.5s ease;
+}
+
+.btn:hover::before {
+    left: 100%;
+}
+
+.btn-primary {
+    background: var(--color-primary);
+    color: var(--color-white);
+    border: 2px solid var(--color-primary);
+}
+
+.btn-primary:hover {
+    background: var(--color-primary-dark);
+    border-color: var(--color-primary-dark);
+    color: var(--color-white);
+    box-shadow: 0 8px 28px var(--color-primary-glow), 0 0 0 4px rgba(184, 150, 12, 0.08);
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--color-text);
+    border: 1.5px solid var(--color-text);
+}
+
+.btn-outline:hover {
+    background: var(--color-primary);
+    color: var(--color-white);
+    border-color: var(--color-primary);
+    box-shadow: 0 8px 28px var(--color-primary-glow);
+    transform: translateY(-2px);
+}
+
+.btn-hero {
+    background: var(--color-primary);
+    color: var(--color-white);
+    border: 2px solid var(--color-primary);
+    padding: 16px 24px;
+    font-size: 0.85rem;
+    border-radius: 24px;
+}
+
+.btn-hero:hover {
+    background: var(--color-primary-dark);
+    border-color: var(--color-primary-dark);
+    box-shadow: 0 8px 32px rgba(168, 137, 42, 0.4);
+    transform: translateY(-2px);
+}
+
+.btn-gold {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+    color: var(--color-white);
+    border: none;
+    box-shadow: 0 4px 14px rgba(158, 124, 58, 0.3);
+}
+
+.btn-gold:hover {
+    background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(158, 124, 58, 0.4);
+    color: var(--color-white);
+}
+
+/* --- Focus Visible (Acessibilidade) --- */
+.btn:focus-visible,
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 4px;
+}
+
+/* =========================== SCROLL PROGRESS BAR =========================== */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    width: 0%;
+    background: linear-gradient(90deg, #9E7C3A 0%, #C9A55A 50%, #DBBF7A 100%);
+    z-index: 1001;
+    opacity: 0.8;
+    transition: width 0.1s linear;
+}
+
+/* =========================== HEADER =========================== */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 16px 24px;
+    transition: all 0.4s ease;
+}
+
+.header-inner {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 60px;
+    padding: 14px 32px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+}
+
+.header .logo,
+.header .nav-link {
+    color: var(--color-white);
+}
+
+.header .nav-link:hover {
+    color: var(--color-primary-light);
+}
+
+.header.scrolled .header-inner {
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+}
+
+.header.scrolled .logo,
+.header.scrolled .nav-link {
+    color: var(--color-text);
+}
+
+.header.scrolled .nav-link:hover {
+    color: var(--color-primary);
+}
+
+
+
+/* =========================== LAYOUT ADJUSTMENTS (User Request) =========================== */
+@media (min-width: 1200px) {
+    .header {
+        width: 1200px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@media (min-width: 769px) {
+
+    /* Boxed Layout for Main Content (Except Hero and Contato) */
+    section:not(.hero):not(.contato) {
+        width: 85%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* ====================================================================================== */
+
+.logo {
+    font-size: 1.35rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    transition: color 0.4s ease;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    background-size: cover;
+    background-position: top center;
+    border-radius: 100px;
+    height: 60px;
+    width: 100%;
+    display: block;
+}
+
+.nav {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .nav {
+        display: flex;
+        gap: var(--spacing-md);
+    }
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--color-text);
+    font-weight: 400;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--color-primary);
+    transition: width 0.3s ease-out;
+}
+
+.nav-link:hover {
+    color: var(--color-primary);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.clinica-v2-cta {
+    padding: 14px 36px;
+    font-size: 0.88rem;
+    border-radius: 50px;
+    width: 100%;
+    /* Estica globalmente */
+    display: flex;
+    /* Necessário para justify-content */
+    justify-content: center;
+}
+
+.clinica-cta-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    /* Wrapper também full width */
+}
+
+.btn-header {
+    padding: 10px 24px;
+    font-size: 0.82rem;
+    border-radius: 50px;
+}
+
+.btn-header:hover {
+    transform: translateY(-1px);
+}
+
+/* --- Hamburger Menu --- */
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    z-index: 1002;
+}
+
+.hamburger-bar {
+    width: 24px;
+    height: 2px;
+    background: var(--color-white);
+    transition: all 0.3s ease;
+    border-radius: 2px;
+}
+
+.header.scrolled .hamburger-bar {
+    background: var(--color-primary);
+}
+
+.hamburger.active .hamburger-bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+    background: var(--color-white);
+}
+
+.hamburger.active .hamburger-bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .hamburger-bar:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+    background: var(--color-white);
+}
+
+@media (min-width: 768px) {
+    .hamburger {
+        display: none;
+    }
+}
+
+/* --- Mobile Menu --- */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(17, 17, 24, 0.98);
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+}
+
+.mobile-menu.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.mobile-menu-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.mobile-menu-link {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--color-white);
+    text-decoration: none;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.4s ease, transform 0.4s ease, color 0.3s ease;
+}
+
+.mobile-menu-link:hover {
+    color: var(--color-primary-light);
+}
+
+.mobile-menu.active .mobile-menu-link {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.mobile-menu.active .mobile-menu-link:nth-child(1) {
+    transition-delay: 0.1s;
+}
+
+.mobile-menu.active .mobile-menu-link:nth-child(2) {
+    transition-delay: 0.2s;
+}
+
+.mobile-menu.active .mobile-menu-link:nth-child(3) {
+    transition-delay: 0.3s;
+}
+
+.mobile-menu.active .mobile-menu-link:nth-child(4) {
+    transition-delay: 0.4s;
+}
+
+.mobile-menu.active .mobile-menu-link:nth-child(5) {
+    transition-delay: 0.5s;
+}
+
+.mobile-menu-cta {
+    margin-top: 16px;
+    opacity: 0;
+    transform: translateY(20px);
+    font-size: 0.85rem !important;
+    border-radius: 50px;
+}
+
+.mobile-menu.active .mobile-menu-cta {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.6s;
+}
+
+/* =========================== HERO SECTION =========================== */
+.hero {
+    position: relative;
+    height: 100vh;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/apmed-estetica/imagens/hero-bg.webp');
+    background-size: cover;
+    background-position: center;
+    z-index: -2;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.55) 100%);
+    z-index: -1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    text-align: left;
+    width: 90%;
+    margin: 0 auto;
+    max-width: var(--container-width);
+    padding-top: 80px;
+}
+
+.hero-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing-lg);
+}
+
+.hero-text {
+    flex: 1;
+    max-width: 650px;
+}
+
+.hero-right {
+    display: none;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 20px;
+    min-width: 340px;
+}
+
+@media (min-width: 1024px) {
+    .hero-right {
+        display: flex;
+    }
+}
+
+.hero-desc {
+    font-size: 0.9rem;
+    color: var(--color-white);
+    line-height: 1.6;
+    text-align: right;
+    white-space: nowrap;
+    font-weight: 600;
+}
+
+.hero-tagline {
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 0.8rem;
+    font-weight: 800;
+    color: var(--color-white);
+    margin-bottom: 24px;
+    background: rgba(158, 124, 58, 0.3);
+    border: 1px solid rgba(201, 165, 90, 0.4);
+    padding: 10px 28px;
+    border-radius: 50px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.headline {
+    font-size: clamp(2.8rem, 6vw, 4.8rem);
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-white);
+    line-height: 1.08;
+}
+
+.headline-italic {
+    font-style: italic;
+}
+
+.subheadline {
+    font-size: clamp(1.05rem, 1.8vw, 1.2rem);
+    color: rgba(255, 255, 255, 0.95);
+    /* Aumentei levemente a opacidade para melhorar o contraste com o peso maior */
+    margin-bottom: var(--spacing-md);
+    max-width: 480px;
+    font-weight: 700;
+    line-height: 1.7;
+}
+
+/* --- Glass Floating Card --- */
+/* =========================== FLOATING CARD (Botão Interativo) =========================== */
+.floating-card {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(201, 165, 90, 0.2);
+    padding: 18px 22px;
+    border-radius: 50px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 14px;
+    width: 100%;
+    /* Comportamento de Link/Botão */
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.floating-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(201, 165, 90, 0.6);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.glass-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+}
+
+.glass-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(158, 124, 58, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    /* Importante para animação */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Ícones sobrepostos */
+.icon-star,
+.icon-arrow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    line-height: 1;
+    transition: all 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+
+.icon-star {
+    font-size: 0.95rem;
+    color: var(--color-primary-light);
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1) rotate(0deg);
+}
+
+.icon-arrow {
+    width: 18px;
+    height: 18px;
+    color: var(--color-primary-light);
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0) rotate(-180deg);
+}
+
+/* Hover States (Troca de ícones) */
+.floating-card:hover .icon-star {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0) rotate(180deg);
+}
+
+.floating-card:hover .icon-arrow {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1) rotate(0deg);
+}
+
+.glass-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.glass-title {
+    font-weight: 600;
+    font-size: 0.82rem;
+    color: var(--color-white);
+    white-space: nowrap;
+}
+
+.glass-subtitle {
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--color-primary-light);
+    transition: color 0.3s ease;
+}
+
+.floating-card:hover .glass-subtitle {
+    color: var(--color-primary-lighter);
+}
+
+.glass-thumb {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+    border: 2px solid rgba(158, 124, 58, 0.3);
+}
+
+.glass-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* =========================== SOBRE NOS SECTION =========================== */
+.sobre {
+    background: #f0f0f0;
+    padding: 100px 0;
+    position: relative;
+    contain: layout paint;
+}
+
+/* Grain overlay */
+.sobre::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+    opacity: 0.03;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.sobre-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+@media (min-width: 900px) {
+    .sobre-grid {
+        flex-direction: row;
+        gap: 50px;
+    }
+
+    .sobre-text-col {
+        width: 100%;
+    }
+
+    .sobre-image-col {
+        width: 100%;
+    }
+}
+
+.sobre-text-col {
+    position: relative;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+@media (min-width: 900px) {
+    .sobre-text-col {
+        padding-left: 32px;
+    }
+}
+
+/* Linha decorativa vertical dourada */
+.sobre-decor-line {
+    display: none;
+}
+
+@media (min-width: 900px) {
+    .sobre-decor-line {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 3px;
+        height: 100%;
+        background: linear-gradient(180deg, #C9A55A 0%, transparent 100%);
+    }
+}
+
+/* --- Label do Quem Somos/Clinica --- */
+.section-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--color-primary);
+    margin-bottom: 16px;
+}
+
+.section-label-dot {
+    width: 8px;
+    height: 8px;
+    background-color: var(--color-primary-light);
+    border-radius: 50%;
+    display: block;
+}
+
+.section-title {
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    color: var(--color-text);
+    margin-bottom: var(--spacing-sm);
+    letter-spacing: 2px;
+}
+
+.sobre-content-text p {
+    font-size: 1.125rem;
+    color: var(--color-text-light);
+    margin-bottom: 24px;
+    line-height: 1.7;
+}
+
+.sobre-lead {
+    font-size: 1.2rem !important;
+    font-weight: 500;
+    color: var(--color-primary-dark) !important;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--color-primary-light);
+    padding-left: 20px;
+}
+
+.sobre-doctors {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 32px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.sobre-doctors li {
+    font-size: 1.05rem;
+    color: var(--color-text);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.sobre-doctors li::before {
+    content: '';
+    display: block;
+    width: 6px;
+    height: 6px;
+    background: var(--color-primary);
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.sobre-signature {
+    font-family: var(--font-main);
+    font-size: 1.25rem !important;
+    font-weight: 400;
+    /* Regular weight for elegance */
+    font-style: italic;
+    color: var(--color-primary) !important;
+    margin-top: 32px;
+    text-align: left;
+    position: relative;
+    display: inline-block;
+}
+
+/* Optional decorative line under signature */
+.sobre-signature::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 2px;
+    background: var(--color-primary-light);
+    margin-top: 12px;
+}
+
+.image-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 50px;
+    /* User request */
+    box-shadow: var(--shadow-soft);
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.image-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    border-radius: 8px;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.image-wrapper:hover img {
+    transform: scale(1.03);
+}
+
+@media (min-width: 900px) {
+    .sobre-image {
+        margin-right: -60px;
+    }
+
+    .sobre-image-col .image-wrapper {
+        width: 85%;
+        margin: 0 auto;
+    }
+}
+
+/* =========================== PROCEDIMENTOS SECTION =========================== */
+.procedimentos {
+    background: var(--color-bg);
+    padding: 100px 0;
+    contain: layout paint;
+}
+
+.procedimentos-title {
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.procedimentos-line {
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #C9A55A, transparent);
+    margin: 0 auto 64px;
+}
+
+.proc-category {
+    margin-bottom: 64px;
+}
+
+.proc-category:last-child {
+    margin-bottom: 0;
+}
+
+.proc-category-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 32px;
+    border: 1.5px solid rgba(158, 124, 58, 0.3);
+    border-radius: 50px;
+    padding: 10px 32px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.proc-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--color-primary-light);
+    display: inline-block;
+}
+
+.proc-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+@media (min-width: 768px) {
+    .proc-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .proc-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* --- Procedure Card --- */
+.proc-card {
+    background: var(--color-white);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 12px;
+    padding: 28px 24px;
+    min-height: 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    cursor: pointer;
+    transition: all 400ms cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.proc-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: linear-gradient(90deg, var(--color-primary-light), var(--color-primary));
+    transition: height 400ms cubic-bezier(0.16, 1, 0.3, 1);
+    border-radius: 12px 12px 0 0;
+}
+
+.proc-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    border-color: rgba(158, 124, 58, 0.3);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+}
+
+.proc-card:hover::after {
+    height: 3px;
+}
+
+.proc-number {
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--color-primary-light);
+    opacity: 0.6;
+    margin-bottom: 12px;
+}
+
+.proc-name {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: 8px;
+    line-height: 1.3;
+    letter-spacing: 0;
+}
+
+.proc-desc {
+    font-size: 0.92rem;
+    font-weight: 500;
+    color: rgb(48, 48, 48);
+    line-height: 1.6;
+}
+
+/* --- CTA Card --- */
+.proc-card-cta {
+    background: linear-gradient(135deg, #9E7C3A 0%, #C9A55A 100%);
+    border: none;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.proc-card-cta::after {
+    display: none;
+}
+
+.proc-card-cta:hover {
+    box-shadow: 0 20px 50px rgba(158, 124, 58, 0.4);
+}
+
+.proc-cta-text {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--color-white);
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.proc-cta-sub {
+    font-size: 0.88rem;
+    color: rgba(255, 255, 255, 0.85);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.proc-cta-sub svg {
+    transition: transform 0.3s ease;
+}
+
+.proc-card-cta:hover .proc-cta-sub svg {
+    transform: translate(3px, -3px);
+}
+
+/* =========================== A CLINICA SECTION (v2) =========================== */
+.clinica-v2 {
+    background: #f0f0f0;
+    padding: 100px 0;
+    contain: layout paint;
+}
+
+.clinica-v2-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+    align-items: center;
+}
+
+@media (min-width: 900px) {
+    .clinica-v2-grid {
+        grid-template-columns: 1fr 1.2fr;
+        gap: 64px;
+    }
+}
+
+.clinica-v2-image .image-wrapper {
+    border-radius: 12px;
+    aspect-ratio: 3/4;
+}
+
+.clinica-v2-image .image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.clinica-v2-image .image-wrapper::before {
+    border-radius: 12px;
+}
+
+.clinica-v2-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 16px;
+}
+
+.clinica-v2-content .section-title {
+    margin-bottom: 16px;
+}
+
+.clinica-v2-content .section-desc {
+    margin-bottom: 40px;
+}
+
+/* Benefits Grid */
+.clinica-v2-benefits {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 40px;
+}
+
+@media (max-width: 480px) {
+    .clinica-v2-benefits {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+.clinica-v2-benefit {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+}
+
+.benefit-icon {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    border-radius: 50%;
+    background: rgba(158, 124, 58, 0.1);
+    border: 1px solid rgba(201, 165, 90, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-primary);
+    transition: all 0.3s ease;
+}
+
+.clinica-v2-benefit:hover .benefit-icon {
+    background: rgba(158, 124, 58, 0.18);
+    border-color: rgba(201, 165, 90, 0.5);
+    transform: scale(1.08);
+}
+
+.benefit-text h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: 4px;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+}
+
+.benefit-text p {
+    font-size: 0.88rem;
+    font-weight: 400;
+    color: var(--color-text-light);
+    /* Cor do texto clareada levemente mantida */
+    opacity: 0.8;
+    line-height: 1.5;
+}
+
+/* Location Card Destaque */
+.clinica-location-card {
+    background: var(--color-white);
+    border: 1px solid rgba(158, 124, 58, 0.2);
+    border-radius: 12px;
+    padding: 24px;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    margin-bottom: 32px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.clinica-location-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+    border-color: rgba(158, 124, 58, 0.4);
+}
+
+.location-icon-wrapper {
+    width: 50px;
+    height: 50px;
+    background: rgba(158, 124, 58, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-primary);
+    flex-shrink: 0;
+}
+
+.location-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.location-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-primary);
+    margin-bottom: 6px;
+}
+
+.location-address {
+    font-size: 0.95rem;
+    color: var(--color-text);
+    line-height: 1.5;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.location-link {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: gap 0.3s ease;
+}
+
+.location-link:hover {
+    gap: 10px;
+}
+
+/* Responsivo mobile */
+@media (max-width: 480px) {
+    .clinica-location-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+}
+
+/* Responsivo mobile */
+@media (max-width: 768px) {
+    .clinica-v2 {
+        padding: 64px 0;
+    }
+}
+
+/* =========================== CONTATO SECTION =========================== */
+
+.contato-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 900px) {
+    .contato-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* --- Lado Esquerdo --- */
+.contato-left {
+    background: var(--color-dark);
+    padding: 80px 24px;
+    position: relative;
+    overflow: hidden;
+}
+
+.contato-left-content {
+    max-width: 480px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+/* Circulos decorativos */
+.contato-circles {
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 300px;
+    height: 300px;
+    z-index: 0;
+    animation: circles-rotate 60s linear infinite;
+}
+
+.contato-circles::before,
+.contato-circles::after {
+    content: '';
+    position: absolute;
+    border: 1px solid var(--color-primary-light);
+    border-radius: 50%;
+    opacity: 0.06;
+}
+
+.contato-circles::before {
+    width: 200px;
+    height: 200px;
+    top: 50px;
+    left: 50px;
+}
+
+.contato-circles::after {
+    width: 300px;
+    height: 300px;
+    top: 0;
+    left: 0;
+}
+
+@keyframes circles-rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.contato-title {
+    font-size: clamp(2rem, 3vw, 2.8rem);
+    font-weight: 700;
+    color: var(--color-white);
+    margin-bottom: 16px;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+}
+
+.contato-subtitle {
+    font-size: 1.05rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.7;
+    margin-bottom: 40px;
+}
+
+/* WhatsApp Button */
+.btn-whatsapp {
+    background: #25D366;
+    color: var(--color-white);
+    border: none;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 0.08em;
+    box-shadow: 0 0 20px rgba(37, 211, 102, 0.3);
+    margin-bottom: 16px;
+    width: 100%;
+    justify-content: center;
+    animation: whatsapp-pulse 2s ease-in-out infinite;
+}
+
+.btn-whatsapp:hover {
+    box-shadow: 0 0 30px rgba(37, 211, 102, 0.5);
+    transform: translateY(-2px);
+}
+
+@keyframes whatsapp-pulse {
+
+    0%,
+    100% {
+        box-shadow: 0 0 20px rgba(37, 211, 102, 0.3);
+    }
+
+    50% {
+        box-shadow: 0 0 28px rgba(37, 211, 102, 0.45);
+    }
+}
+
+/* Instagram Button */
+.btn-instagram {
+    background: transparent;
+    color: var(--color-white);
+    border: 1.5px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 0.08em;
+    width: 100%;
+    justify-content: center;
+}
+
+.btn-instagram:hover {
+    border-color: var(--color-primary-light);
+    color: var(--color-primary-light);
+    box-shadow: 0 0 20px rgba(201, 165, 90, 0.2);
+    transform: translateY(-2px);
+}
+
+/* --- Lado Direito - Formulario --- */
+.contato-right {
+    background: var(--color-accent);
+    padding: 80px 24px;
+}
+
+.contato-form {
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+@media (min-width: 900px) {
+    .contato-left {
+        padding: 80px 60px;
+    }
+
+    .contato-right {
+        padding: 80px 60px;
+    }
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--color-text);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 8px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 14px 16px;
+    height: 48px;
+    font-family: var(--font-main);
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--color-text);
+    background: var(--color-white);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    transition: border-color 300ms ease, box-shadow 300ms ease;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(158, 124, 58, 0.1);
+}
+
+.form-input.error {
+    border-color: #e74c3c;
+}
+
+.form-textarea {
+    min-height: 120px;
+    height: auto;
+    resize: vertical;
+}
+
+.form-feedback {
+    font-size: 0.85rem;
+    margin-bottom: 12px;
+    min-height: 20px;
+}
+
+.form-feedback.success {
+    color: #25D366;
+}
+
+.form-feedback.error {
+    color: #e74c3c;
+}
+
+.btn-submit {
+    background: var(--color-primary);
+    color: var(--color-white);
+    border: none;
+    border-radius: 4px;
+    width: 100%;
+    padding: 16px 32px;
+    font-size: 0.9rem;
+    justify-content: center;
+}
+
+.btn-submit:hover {
+    background: var(--color-primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 28px var(--color-primary-glow);
+}
+
+/* =========================== CONTATO SECTION (Novo Estilo) =========================== */
+.pai {
+    /* Layout Original Desktop */
+    height: 50vh;
+    margin: 80px 0;
+    padding: 58px 24px;
+    border-radius: 100px;
+    width: 84%;
+    /* Manter efeitos visuais */
+    background: linear-gradient(135deg, rgba(158, 124, 58, 0.15) 0%, rgba(201, 165, 90, 0.1) 40%, rgba(158, 124, 58, 0.18) 100%);
+    backdrop-filter: blur(28px) saturate(1.4);
+    -webkit-backdrop-filter: blur(28px) saturate(1.4);
+    border: 1px solid rgba(201, 165, 90, 0.25);
+    box-shadow: 0 8px 32px rgba(158, 124, 58, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .pai {
+        /* Layout Mobile */
+        width: 92%;
+        height: auto;
+        min-height: 50vh;
+        padding: 40px 24px;
+        border-radius: 40px;
+        margin: 40px auto;
+    }
+
+    .filho {
+        width: 100%;
+        gap: 24px;
+    }
+
+    .textos h2 {
+        font-size: 2rem;
+        /* Ajuste no tamanho da fonte mobile */
+    }
+
+    .textos p {
+        font-size: 1rem;
+    }
+}
+
+.contato {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.filho {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.botoes {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    width: auto;
+    /* Limite para não esticar demais */
+}
+
+.textos {
+    padding-bottom: 18px;
+    gap: 20px;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.textos h2 {
+    color: var(--color-text);
+    font-weight: 600;
+    font-size: clamp(2.8rem, 4vw, 38px);
+    /* Responsivo */
+    letter-spacing: 1.5px;
+    line-height: 1.2;
+}
+
+.textos p {
+    font-weight: 400;
+    color: var(--color-text-light);
+    font-size: 18px;
+}
+
+.botoes .btn-gold {
+    padding: 12px 32px;
+    justify-content: center;
+    width: 100%;
+}
+
+/* =========================== RODAPE (Novo Layout) =========================== */
+.footer {
+    background: linear-gradient(135deg, rgba(5, 5, 8, 0.98), rgba(0, 0, 5, 0.99));
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    position: relative;
+    padding: 80px 0;
+    width: 100%;
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+    opacity: 0.05;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.footer-content {
+    position: relative;
+    z-index: 1;
+    width: 85%;
+    max-width: auto;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    gap: 40px;
+}
+
+/* Logo + Redes Sociais */
+.footer-logo-col {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.footer-logo-col img {
+    border-radius: 100px;
+    width: 100%;
+    height: 180px;
+}
+
+.footer-logo {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--color-white);
+    letter-spacing: -0.03em;
+    text-decoration: none;
+    transition: text-shadow 400ms ease;
+}
+
+.footer-logo:hover {
+    text-shadow: 0 0 20px rgba(201, 165, 90, 0.3);
+}
+
+.footer-social {
+    justify-content: center;
+    display: flex;
+    gap: 12px;
+}
+
+.footer-social-link {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-primary-light);
+    border: 1px solid var(--color-primary-light);
+    opacity: 1;
+    transition: all 0.3s ease;
+}
+
+.footer-social-link:hover {
+    border-color: var(--color-primary-light);
+    color: var(--color-primary-light);
+    background: rgba(158, 124, 58, 0.1);
+}
+
+/* Colunas */
+.footer-heading {
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--color-primary-light);
+    margin-bottom: 16px;
+}
+
+.footer-col-pages,
+.footer-col-contact,
+.footer-col-location {
+    padding-top: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer-link {
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    color: var(--color-primary-light);
+}
+
+/* Contato Items */
+.footer-contact-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-contact-item svg {
+    color: var(--color-primary-light);
+    flex-shrink: 0;
+}
+
+.footer-contact-item:hover {
+    color: var(--color-primary-light);
+}
+
+/* Endereco Wrapper & Icon */
+.footer-address-wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+
+.footer-address-icon {
+    flex-shrink: 0;
+    cursor: default;
+    border: none;
+    /* Remover borda */
+    background: transparent;
+    width: auto;
+    /* Tamanho automático pois não precisa de container circular */
+    height: auto;
+    padding: 0;
+    color: var(--color-primary-light);
+    margin-top: 2px;
+    /* Ajuste fino de alinhamento com texto */
+}
+
+.footer-address-icon svg {
+    width: 20px;
+    /* Tamanho do ícone */
+    height: 20px;
+}
+
+.footer-address-icon:hover {
+    background: transparent;
+    border-color: var(--color-primary-light);
+    color: var(--color-primary-light);
+}
+
+.footer-address {
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 1.6;
+}
+
+/* Footer Map */
+.footer-map {
+    width: 100%;
+    height: 160px;
+    border: 0;
+    border-radius: 8px;
+    filter: grayscale(100%) invert(92%) contrast(83%);
+    /* Efeito Dark Grayscale */
+    opacity: 0.7;
+    transition: all 0.4s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.footer-map:hover {
+    filter: grayscale(0%) invert(0%);
+    opacity: 1;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Subfooter */
+.subfooter {
+    background: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    padding: 14px 20px;
+}
+
+.subfooter p {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.3);
+    text-align: center;
+    font-family: var(--font-main);
+    line-height: 1.5;
+    max-width: 600px;
+}
+
+@media (max-width: 768px) {
+    .subfooter {
+        padding: 16px 24px;
+    }
+
+    .subfooter p {
+        font-size: 2.6vw;
+        line-height: 1.6;
+        max-width: 100%;
+        white-space: nowrap;
+    }
+}
+
+/* Responsivo Footer */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 32px;
+    }
+
+    .footer-logo-col {
+        align-items: center;
+    }
+
+    .footer-col-pages,
+    .footer-col-contact,
+    .footer-col-location {
+        align-items: center;
+    }
+
+    .footer-contact-item {
+        justify-content: center;
+    }
+}
+
+/* =========================== SCROLL TO TOP =========================== */
+.scroll-top {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--color-primary);
+    color: var(--color-white);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    pointer-events: none;
+}
+
+.scroll-top.visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: all;
+}
+
+.scroll-top:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(158, 124, 58, 0.4);
+}
+
+/* =========================== RESPONSIVIDADE - MOBILE =========================== */
+@media (max-width: 768px) {
+    .header {
+        padding: 10px 12px;
+    }
+
+    .header-inner {
+        padding: 10px 18px;
+        border-radius: 40px;
+    }
+
+    .btn-header {
+        display: none;
+    }
+
+    .hero-content {
+        padding-bottom: 60px;
+    }
+
+    .headline {
+        font-size: clamp(2.2rem, 8vw, 3.2rem);
+    }
+
+    /* Sobre */
+    .sobre {
+        padding: 64px 0;
+    }
+
+    .sobre-grid {
+        gap: 40px;
+    }
+
+    /* Procedimentos */
+    .procedimentos {
+        padding: 64px 0;
+    }
+
+    .procedimentos-line {
+        margin-bottom: 40px;
+    }
+
+    .proc-category {
+        margin-bottom: 48px;
+    }
+
+    /* Clinica */
+    .clinica-v2 {
+        padding: 48px 0;
+    }
+
+    /* Contato */
+    .contato-left {
+        padding: 48px 24px;
+    }
+
+    .contato-right {
+        padding: 48px 24px;
+    }
+
+    .btn-whatsapp,
+    .btn-instagram {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 48px 0 24px;
+    }
+
+    .footer-grid {
+        text-align: center;
+    }
+
+    .footer-link {
+        width: auto;
+    }
+
+    .footer-link::after {
+        display: none;
+    }
+
+    .footer-nav {
+        align-items: center;
+    }
+
+    .footer-contact {
+        align-items: center;
+    }
+
+    .footer-col {
+        align-items: center;
+    }
+
+    /* Centralização Geral Mobile */
+    .section-title,
+    .headline,
+    .subheadline,
+    .section-desc,
+    .sobre-content-text,
+    .clinica-v2-content,
+    .location-content {
+        text-align: center;
+    }
+
+    .section-label,
+    .clinica-v2-label {
+        justify-content: center;
+    }
+
+    .hero-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-actions {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .sobre-text-col {
+        align-items: center;
+        /* Centraliza botão e labels */
+    }
+
+    .sobre-doctors {
+        align-items: center;
+    }
+
+    .sobre-signature {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .sobre-signature::after {
+        margin: 12px auto 0;
+        /* Centraliza linha decorativa */
+    }
+
+    .clinica-v2-grid {
+        gap: 40px;
+    }
+
+    /* Melhorias visuais card location mobile */
+    .clinica-location-card {
+        align-items: center;
+        text-align: center;
+    }
+
+
+    .location-link {
+        justify-content: center;
+    }
+
+    /* Botão Full Width Mobile */
+    .clinica-cta-wrapper {
+        width: 100%;
+    }
+
+    .clinica-v2-cta {
+        width: 100%;
+        justify-content: center;
+        display: flex;
+    }
+}
+
+/* Tablet */
+@media (min-width: 769px) and (max-width: 900px) {
+    .sobre-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sobre-image {
+        margin-right: 0;
+    }
+}
+
+/* intl-tel-input container fix */
+.iti {
+    width: 100%;
+}
+
+.iti .form-input {
+    width: 100%;
+}
+
+/* =========================== BUTTON GOLD (Harmonizado + Reluzente) =========================== */
+.btn-gold {
+    border-radius: 50px;
+    /* Gradiente base (Statica) */
+    background: linear-gradient(90deg, var(--color-primary) 0%, var(--color-primary-light) 50%, var(--color-primary) 100%);
+    background-size: 200% auto;
+    /* Sombra (Glow) */
+    box-shadow: 0 4px 15px var(--color-primary-glow);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    /* Borda mais visivel */
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 16px 32px;
+    /* Texto */
+    color: var(--color-white);
+    text-decoration: none;
+    font-family: var(--font-main);
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Hover Effect */
+.btn-gold:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(201, 165, 90, 0.6);
+    /* Glow intenso */
+}
+
+/* Active Effect */
+.btn-gold:active {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(158, 124, 58, 0.4);
+}
+
+/* Brilho reluzente infinito (SHINE ANIMATION) */
+.btn-gold::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -150%;
+    width: 100%;
+    height: 100%;
+    /* Brilho branco intenso */
+    background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.1) 20%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0.1) 80%, transparent 100%);
+    transform: skewX(-20deg);
+    pointer-events: none;
+    /* Animacao continua */
+    animation: gold-shine 3s infinite ease-in-out;
+}
+
+@keyframes gold-shine {
+    0% {
+        left: -150%;
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 1;
+    }
+
+    50% {
+        left: 150%;
+        opacity: 1;
+    }
+
+    100% {
+        left: 150%;
+        opacity: 0;
+    }
+}
+
+/* Ajuste do Texto */
+.btn-text {
+    z-index: 2;
+    position: relative;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    /* Legibilidade */
+}
+
+/* Responsivo */
+@media (max-width: 767px) {
+    .btn-gold {
+        width: 100%;
+        padding: 18px 24px;
+    }
+}
+
+/* =========================== HERO ENTRANCE ANIMATION (Apple Feel) =========================== */
+@keyframes heroFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(28px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-tagline {
+    animation: heroFadeIn 1s cubic-bezier(0.22, 1, 0.36, 1) 0.1s both;
+}
+
+.headline {
+    animation: heroFadeIn 1s cubic-bezier(0.22, 1, 0.36, 1) 0.25s both;
+}
+
+.subheadline {
+    animation: heroFadeIn 1s cubic-bezier(0.22, 1, 0.36, 1) 0.4s both;
+}
+
+.hero-actions {
+    animation: heroFadeIn 1s cubic-bezier(0.22, 1, 0.36, 1) 0.55s both;
+}
+
+.hero-desc {
+    animation: heroFadeIn 1s cubic-bezier(0.22, 1, 0.36, 1) 0.5s both;
+}
+
+.floating-card {
+    animation: heroFadeIn 1s cubic-bezier(0.22, 1, 0.36, 1) 0.65s both;
+}
+
+/* =========================== APPLE-FEEL AOS OVERRIDES =========================== */
+[data-aos] {
+    transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1) !important;
+}
+
+[data-aos="fade-up"] {
+    transform: translateY(30px);
+}
+
+[data-aos="fade-up"].aos-animate {
+    transform: translateY(0);
+}
+
+/* =========================== PREMIUM MOBILE REFINEMENTS =========================== */
+@media (max-width: 768px) {
+
+    /* --- 1. Menu Mobile: centralizar opcoes --- */
+    .mobile-menu-nav {
+        width: 100%;
+        padding: 0 24px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .mobile-menu-link {
+        width: 100%;
+        text-align: center;
+    }
+
+    .mobile-menu-cta {
+        width: 80%;
+        text-align: center;
+        justify-content: center;
+    }
+
+    /* --- 2. Procedimentos: card CTA por ultimo --- */
+    .proc-card-cta {
+        order: 99;
+    }
+
+    /* --- 3. Clinica: titulo em linha unica, sem icones, textos centralizados --- */
+    .clinica-v2-content .section-title {
+        white-space: nowrap;
+        font-size: clamp(1.35rem, 5.5vw, 2rem);
+    }
+
+    .benefit-icon {
+        display: none;
+    }
+
+    .clinica-v2-benefit {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .benefit-text {
+        text-align: center;
+    }
+
+    .benefit-text h4 {
+        text-align: center;
+    }
+
+    .benefit-text p {
+        text-align: center;
+    }
+
+    /* --- 4. Contato: layout mobile harmonioso --- */
+    .textos h2 {
+        font-size: 1.5rem !important;
+        line-height: 1.3;
+    }
+
+    .textos p {
+        font-size: 0.95rem;
+    }
+
+    .filho {
+        width: 90%;
+        gap: 28px;
+        align-items: center;
+    }
+
+    .botoes {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+        align-items: center;
+    }
+
+    .botoes .btn-gold {
+        width: 100%;
+        padding: 16px 24px;
+        font-size: 0.85rem;
+        justify-content: center;
+    }
+
+    .pai {
+        padding: 36px 20px;
+        border-radius: 32px;
+    }
+
+    /* --- 5. Animacoes mais visiveis no mobile --- */
+    [data-aos="fade-up"] {
+        transform: translateY(24px);
+    }
+
+    [data-aos="fade-right"] {
+        transform: translateX(-20px);
+    }
+
+    [data-aos="fade-left"] {
+        transform: translateX(20px);
+    }
+}
+
+/* =========================== GLOBAL APPLE-FEEL TRANSITIONS =========================== */
+
+/* Links suaves */
+a {
+    transition: color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        opacity 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Cards suaves */
+.proc-card {
+    transition: all 500ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.proc-card:hover {
+    transform: translateY(-6px) scale(1.01);
+}
+
+/* Benefit cards suaves */
+.clinica-v2-benefit {
+    transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Image wrapper suave */
+.image-wrapper img {
+    transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Botoes suaves */
+.btn-gold {
+    transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Section desc */
+.section-desc {
+    font-size: 1.05rem;
+    color: var(--color-text-light);
+    line-height: 1.7;
+}
