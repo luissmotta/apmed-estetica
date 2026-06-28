@@ -1,391 +1,2752 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apmed Estética - Realce sua Beleza Natural</title>
-    <meta name="description"
-        content="Tratamentos faciais e corporais personalizados para elevar sua autoestima e bem-estar na Apmed Estética.">
-    <!-- Google Fonts: Karla (async) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,300;0,400;0,700;1,300&display=swap"
-        rel="stylesheet" media="print" onload="this.media='all'"> <noscript>
-        <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,300;0,400;0,700;1,300&display=swap"
-            rel="stylesheet">
-    </noscript>
-    <!-- Hero Image Preload (LCP) -->
-    <!-- Hero Image (LCP optimized in body) -->
-    <!-- AOS CSS (Async) -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" media="print" onload="this.media='all'">
-    <!-- intl-tel-input CSS (Async) -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@24.6.0/build/css/intlTelInput.css"
-        media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="/apmed-estetica/style.css">
+  <meta charset="utf-8" />
+  <meta content="width=device-width" name="viewport" />
+  <title>AP Med Estética</title>
+  <!-- SwiperJS Premium Carousel -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <meta content="Living design system and pattern library for the Holistic wellness coaching website template."
+    name="description" />
+  <link href="assets/4862b8884159767a_XqdvLkVmGSwWEgL2FBUuSEVQIUk.png" rel="icon" />
+
+  <!-- ═══════════════════════════════════════════════════════════
+     ORIGINAL FONT FACES — exact copy from index.html
+     ═══════════════════════════════════════════════════════════ -->
+  <style data-framer-font-css="">
+    @font-face {
+      font-family: "Playfair Display";
+      src: url("assets/e0f99b39b63f5e81_jizBRFtNs2ka5fXjeivQ4LroWlx-2z.woff2");
+      font-display: swap;
+      font-style: normal;
+      font-weight: 400
+    }
+
+    @font-face {
+      font-family: "Playfair Display";
+      src: url("assets/362b168da82d69bc_GrgcKwrN6d3Uz8EwcLHZxwEfC4.woff2");
+      font-display: swap;
+      font-style: italic;
+      font-weight: 400
+    }
+
+    @font-face {
+      font-family: "Inter";
+      src: url("assets/362b168da82d69bc_GrgcKwrN6d3Uz8EwcLHZxwEfC4.woff2");
+      font-display: swap;
+      font-style: normal;
+      font-weight: 400;
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2070, U+2074-207E, U+2080-208E, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
+    }
+
+    @font-face {
+      font-family: "Inter";
+      src: url("assets/2f1040eb66570b6e_d3tHnaQIAeqiE5hGcRw4mmgWYU.woff2");
+      font-display: swap;
+      font-style: normal;
+      font-weight: 500;
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
+    }
+
+    @font-face {
+      font-family: "Inter";
+      src: url("assets/362b168da82d69bc_GrgcKwrN6d3Uz8EwcLHZxwEfC4.woff2");
+      font-display: swap;
+      font-style: normal;
+      font-weight: 700;
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
+    }
+
+    @font-face {
+      font-family: "Playfair Display Placeholder";
+      src: local("Times New Roman");
+      ascent-override: 117.87%;
+      descent-override: 36.91%;
+      line-gap-override: 0.00%;
+      size-adjust: 83.99%
+    }
+
+    @font-face {
+      font-family: "Inter Placeholder";
+      src: local("Arial");
+      ascent-override: 89.79%;
+      descent-override: 22.36%;
+      line-gap-override: 0.00%;
+      size-adjust: 107.89%
+    }
+  </style>
+
+  <!-- ═══════════════════════════════════════════════════════════
+     ORIGINAL DESIGN TOKENS & FRAMER CSS — copied from index.html
+     ═══════════════════════════════════════════════════════════ -->
+  <style>
+    /* === Design Tokens === */
+    body {
+      --token-f8dc39cc-9b31-4d20-8063-4556a3d8afa9: #fff;
+      --token-c2e2a410-6f04-4250-8cbc-525e953a716f: #ffffff3d;
+      --token-2007957d-a074-4c0c-8a33-8d85ed1ba0fd: #000;
+      --token-7513ecda-102e-44af-bcb5-cc88031ed55c: #fff0;
+      --token-880f89e1-36c9-4265-a2f4-20ec3d5bd7ce: #fef9ef;
+      --token-8ee275ec-326d-4bf1-adfb-1bdb25eaaa6f: #f5ede1;
+      --token-73f2db1a-7507-497c-8ae8-8d245cb8f957: #C4A157;
+      --token-6d5be345-cf23-4856-a078-3221a9f6ead3: #2a2b2f;
+      --token-0a9a84c4-70a7-4ce1-a76e-6e1911018c59: #2a2b2fb3;
+      --token-6b5f02ce-77c5-459a-98a9-df47dd6bf4c9: #C4A1571f;
+      --token-cb9a3784-894f-4e50-a9eb-3f7144efdf20: #fef9ef52;
+      --token-44e26cfa-2594-4e6d-9dc9-f6f3f293e1ee: #fef9ef3d;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      min-height: 100%;
+      overflow-x: hidden;
+    }
+
+    body {
+      background: var(--token-880f89e1-36c9-4265-a2f4-20ec3d5bd7ce, #fef9ef);
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    :root {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    figure {
+      margin: 0;
+    }
+
+    /* === Framer Text System (condensed) === */
+    p.framer-text,
+    div.framer-text,
+    h1.framer-text,
+    h2.framer-text,
+    h3.framer-text,
+    h4.framer-text,
+    h5.framer-text,
+    h6.framer-text,
+    li.framer-text,
+    ol.framer-text,
+    ul.framer-text,
+    mark.framer-text,
+    span.framer-text:not([data-text-fill]) {
+      font-family: var(--framer-font-family-preview, var(--framer-blockquote-font-family, var(--framer-font-family, Inter, "Inter Placeholder", sans-serif)));
+      font-style: var(--framer-font-style-preview, var(--framer-blockquote-font-style, var(--framer-font-style, normal)));
+      font-weight: var(--framer-font-weight-preview, var(--framer-blockquote-font-weight, var(--framer-font-weight, 400)));
+      color: var(--framer-blockquote-text-color, var(--framer-text-color, #000));
+      font-size: calc(var(--framer-blockquote-font-size, var(--framer-font-size, 16px)) * var(--framer-font-size-scale, 1));
+      letter-spacing: var(--framer-blockquote-letter-spacing, var(--framer-letter-spacing, 0));
+      text-transform: var(--framer-blockquote-text-transform, var(--framer-text-transform, none));
+      line-height: var(--framer-blockquote-line-height, var(--framer-line-height, 1.2em));
+      text-align: var(--framer-blockquote-text-alignment, var(--framer-text-alignment, start));
+      text-decoration: var(--framer-blockquote-text-decoration, var(--framer-text-decoration, initial));
+      font-feature-settings: var(--framer-font-open-type-features, initial);
+      font-variation-settings: var(--framer-font-variation-axes-preview, var(--framer-font-variation-axes, normal));
+      text-wrap: var(--framer-text-wrap-override, var(--framer-text-wrap));
+    }
+
+    span.framer-text[data-text-fill] {
+      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;
+      background-clip: text;
+      display: inline-block;
+    }
+
+    /* === Style Presets (Typography) === */
+    /* Hero H1 — Playfair Display 90px */
+    .framer-styles-preset-ockbjb:not(.rich-text-wrapper),
+    .framer-kPj4o .framer-styles-preset-ockbjb.rich-text-wrapper h1 {
+      --framer-font-family: "Playfair Display", serif;
+      --framer-font-size: 90px;
+      --framer-font-weight: 400;
+      --framer-letter-spacing: -0.03em;
+      --framer-line-height: 100%;
+      --framer-text-alignment: start;
+      --framer-text-color: var(--token-2007957d-a074-4c0c-8a33-8d85ed1ba0fd, #000);
+      --framer-text-decoration: none;
+      --framer-text-transform: none;
+    }
+
+    /* Stats H2 — DM Sans 40px */
+    .framer-styles-preset-18v7424:not(.rich-text-wrapper),
+    .framer-Jw7vt .framer-styles-preset-18v7424.rich-text-wrapper h2 {
+      --framer-font-family: "DM Sans", sans-serif;
+      --framer-font-open-type-features: 'blwf' on, 'cv09' on, 'cv03' on, 'cv04' on, 'cv11' on;
+      --framer-font-size: 40px;
+      --framer-font-weight: 400;
+      --framer-letter-spacing: -0.07em;
+      --framer-line-height: 110%;
+      --framer-text-alignment: start;
+      --framer-text-color: var(--token-2007957d-a074-4c0c-8a33-8d85ed1ba0fd, #000);
+      --framer-text-decoration: none;
+      --framer-text-transform: none;
+    }
+
+    /* Subheading H3 — DM Sans 42px Medium */
+    .framer-styles-preset-15e8fyd:not(.rich-text-wrapper) {
+      --framer-font-family: "DM Sans", sans-serif;
+      --framer-font-open-type-features: 'blwf' on, 'cv09' on, 'cv03' on, 'cv04' on, 'cv11' on;
+      --framer-font-size: 42px;
+      --framer-font-weight: 500;
+      --framer-letter-spacing: -0.06em;
+      --framer-line-height: 100%;
+      --framer-text-alignment: start;
+      --framer-text-color: var(--token-2007957d-a074-4c0c-8a33-8d85ed1ba0fd, #000);
+      --framer-text-decoration: none;
+      --framer-text-transform: none;
+    }
+
+    /* Section Heading — DM Sans 28px */
+    .framer-styles-preset-1sjlsrc:not(.rich-text-wrapper) {
+      --framer-font-family: "DM Sans", sans-serif;
+      --framer-font-open-type-features: 'blwf' on, 'cv09' on, 'cv03' on, 'cv04' on, 'cv11' on;
+      --framer-font-size: 28px;
+      --framer-font-weight: 400;
+      --framer-letter-spacing: -0.06em;
+      --framer-line-height: 130%;
+      --framer-text-alignment: start;
+      --framer-text-color: var(--token-2007957d-a074-4c0c-8a33-8d85ed1ba0fd, #000);
+      --framer-text-decoration: none;
+      --framer-text-transform: none;
+    }
+
+    /* Quote/Large — Inter 24px */
+    .framer-styles-preset-fom1pv:not(.rich-text-wrapper),
+    .framer-AKQHP .framer-styles-preset-fom1pv.rich-text-wrapper p {
+      --framer-font-family: "Inter", "Inter Placeholder", sans-serif;
+      --framer-font-open-type-features: 'blwf' on, 'cv09' on, 'cv03' on, 'cv04' on, 'cv11' on;
+      --framer-font-size: 24px;
+      --framer-font-weight: 400;
+      --framer-letter-spacing: -0.06em;
+      --framer-line-height: 130%;
+      --framer-text-alignment: start;
+      --framer-text-color: var(--token-2007957d-a074-4c0c-8a33-8d85ed1ba0fd, #000);
+      --framer-text-decoration: none;
+      --framer-text-transform: none;
+    }
+
+    /* Heading Small — DM Sans 22px Medium */
+    .framer-styles-preset-y1tiac:not(.rich-text-wrapper),
+    .framer-DznSP .framer-styles-preset-y1tiac.rich-text-wrapper p {
+      --framer-font-family: "DM Sans", sans-serif;
+      --framer-font-open-type-features: 'blwf' on, 'cv09' on, 'cv03' on, 'cv04' on, 'cv11' on;
+      --framer-font-size: 22px;
+      --framer-font-weight: 500;
+      --framer-letter-spacing: -0.05em;
+      --framer-line-height: 130%;
+      --framer-text-alignment: start;
+      --framer-text-color: var(--token-2007957d-a074-4c0c-8a33-8d85ed1ba0fd, #000);
+      --framer-text-decoration: none;
+      --framer-text-transform: none;
+    }
+
+    /* Body XL — Inter 20px Medium */
+    .framer-styles-preset-1qpfnq6:not(.rich-text-wrapper) {
+      --framer-font-family: "Inter", "Inter Placeholder", sans-serif;
+      --framer-font-open-type-features: 'blwf' on, 'cv09' on, 'cv03' on, 'cv04' on, 'cv11' on;
+      --framer-font-size: 20px;
+      --framer-font-weight: 500;
+      --framer-letter-spacing: -0.05em;
+      --framer-line-height: 150%;
+      --framer-text-alignment: start;
+      --framer-text-color: var(--token-2007957d-a074-4c0c-8a33-8d85ed1ba0fd, #000);
+      --framer-text-decoration: none;
+      --framer-text-transform: none;
+    }
+
+    /* Body L — Inter 20px */
+    .framer-styles-preset-1bo7ki3:not(.rich-text-wrapper),
+    .framer-unAeq .framer-styles-preset-1bo7ki3.rich-text-wrapper p {
+      --framer-font-family: "Inter", "Inter Placeholder", sans-serif;
+      --framer-font-open-type-features: 'blwf' on, 'cv09' on, 'cv03' on, 'cv04' on, 'cv11' on;
+      --framer-font-size: 20px;
+      --framer-font-weight: 400;
+      --framer-letter-spacing: -0.05em;
+      --framer-line-height: 150%;
+      --framer-text-alignment: start;
+      --framer-text-color: var(--token-2007957d-a074-4c0c-8a33-8d85ed1ba0fd, #000);
+      --framer-text-decoration: none;
+      --framer-text-transform: none;
+    }
+
+    /* Body M — Inter 18px bold-body */
+    .framer-styles-preset-1t0qbzo:not(.rich-text-wrapper),
+    .framer-T2jRa .framer-styles-preset-1t0qbzo.rich-text-wrapper p {
+      --framer-font-family: "Inter", "Inter Placeholder", sans-serif;
+      --framer-font-open-type-features: 'blwf' on, 'cv09' on, 'cv03' on, 'cv04' on, 'cv11' on;
+      --framer-font-size: 18px;
+      --framer-font-weight: 500;
+      --framer-letter-spacing: -0.05em;
+      --framer-line-height: 150%;
+      --framer-text-alignment: start;
+      --framer-text-color: var(--token-2007957d-a074-4c0c-8a33-8d85ed1ba0fd, #000);
+      --framer-text-decoration: none;
+      --framer-text-transform: none;
+    }
+
+    /* Body M Regular — Inter 18px */
+    .framer-styles-preset-1o7ea33:not(.rich-text-wrapper),
+    .framer-VPYuZ .framer-styles-preset-1o7ea33.rich-text-wrapper p {
+      --framer-font-family: "Inter", "Inter Placeholder", sans-serif;
+      --framer-font-open-type-features: 'blwf' on, 'cv09' on, 'cv03' on, 'cv04' on, 'cv11' on;
+      --framer-font-size: 18px;
+      --framer-font-weight: 400;
+      --framer-letter-spacing: -0.05em;
+      --framer-line-height: 150%;
+      --framer-text-alignment: start;
+      --framer-text-color: var(--token-2007957d-a074-4c0c-8a33-8d85ed1ba0fd, #000);
+      --framer-text-decoration: none;
+      --framer-text-transform: none;
+    }
+
+    /* Card Body — Inter 17px Medium */
+    .framer-styles-preset-1vefhkb:not(.rich-text-wrapper) {
+      --framer-font-family: "Inter", "Inter Placeholder", sans-serif;
+      --framer-font-open-type-features: 'blwf' on, 'cv09' on, 'cv03' on, 'cv04' on, 'cv11' on;
+      --framer-font-size: 17px;
+      --framer-font-weight: 500;
+      --framer-letter-spacing: -0.05em;
+      --framer-line-height: 140%;
+      --framer-text-alignment: start;
+      --framer-text-color: var(--token-2007957d-a074-4c0c-8a33-8d85ed1ba0fd, #000);
+      --framer-text-decoration: none;
+      --framer-text-transform: none;
+    }
+
+    /* Button/Link M — Inter 16px Medium */
+    .framer-styles-preset-16xzgux:not(.rich-text-wrapper),
+    .framer-4MH34 .framer-styles-preset-16xzgux.rich-text-wrapper p {
+      --framer-font-family: "Inter", "Inter Placeholder", sans-serif;
+      --framer-font-open-type-features: 'blwf' on, 'cv09' on, 'cv03' on, 'cv04' on, 'cv11' on;
+      --framer-font-size: 16px;
+      --framer-font-weight: 500;
+      --framer-letter-spacing: -0.05em;
+      --framer-line-height: 150%;
+      --framer-text-alignment: start;
+      --framer-text-color: var(--token-2007957d-a074-4c0c-8a33-8d85ed1ba0fd, #000);
+      --framer-text-decoration: none;
+      --framer-text-transform: none;
+    }
+
+    /* Body S Regular — Inter 16px */
+    .framer-styles-preset-10e7q2u:not(.rich-text-wrapper),
+    .framer-MXXiI .framer-styles-preset-10e7q2u.rich-text-wrapper p {
+      --framer-font-family: "Inter", "Inter Placeholder", sans-serif;
+      --framer-font-open-type-features: 'blwf' on, 'cv09' on, 'cv03' on, 'cv04' on, 'cv11' on;
+      --framer-font-size: 16px;
+      --framer-font-weight: 400;
+      --framer-letter-spacing: -0.05em;
+      --framer-line-height: 150%;
+      --framer-text-alignment: start;
+      --framer-text-color: var(--token-2007957d-a074-4c0c-8a33-8d85ed1ba0fd, #000);
+      --framer-text-decoration: none;
+      --framer-text-transform: none;
+    }
+
+    /* Nav Link / Tag — Inter 14px Medium */
+    .framer-styles-preset-l7ggan:not(.rich-text-wrapper) {
+      --framer-font-family: "Inter", "Inter Placeholder", sans-serif;
+      --framer-font-open-type-features: 'blwf' on, 'cv09' on, 'cv03' on, 'cv04' on, 'cv11' on;
+      --framer-font-size: 14px;
+      --framer-font-weight: 500;
+      --framer-letter-spacing: -0.05em;
+      --framer-line-height: 150%;
+      --framer-text-alignment: start;
+      --framer-text-color: var(--token-2007957d-a074-4c0c-8a33-8d85ed1ba0fd, #000);
+      --framer-text-decoration: none;
+      --framer-text-transform: none;
+    }
+
+    /* Caption — Inter 14px */
+    .framer-styles-preset-136ys4s:not(.rich-text-wrapper) {
+      --framer-font-family: "Inter", "Inter Placeholder", sans-serif;
+      --framer-font-open-type-features: 'blwf' on, 'cv09' on, 'cv03' on, 'cv04' on, 'cv11' on;
+      --framer-font-size: 14px;
+      --framer-font-weight: 400;
+      --framer-letter-spacing: -0.05em;
+      --framer-line-height: 150%;
+      --framer-text-alignment: start;
+      --framer-text-color: var(--token-2007957d-a074-4c0c-8a33-8d85ed1ba0fd, #000);
+      --framer-text-decoration: none;
+      --framer-text-transform: none;
+    }
+
+    /* Label — Inter 12px Medium */
+    .framer-styles-preset-1nfj4j7:not(.rich-text-wrapper) {
+      --framer-font-family: "Inter", "Inter Placeholder", sans-serif;
+      --framer-font-open-type-features: 'blwf' on, 'cv09' on, 'cv03' on, 'cv04' on, 'cv11' on;
+      --framer-font-size: 12px;
+      --framer-font-weight: 500;
+      --framer-letter-spacing: -0.05em;
+      --framer-line-height: 150%;
+      --framer-text-alignment: start;
+      --framer-text-color: var(--token-2007957d-a074-4c0c-8a33-8d85ed1ba0fd, #000);
+      --framer-text-decoration: none;
+      --framer-text-transform: none;
+    }
+
+    /* Micro — Inter 12px */
+    .framer-styles-preset-174its8:not(.rich-text-wrapper) {
+      --framer-font-family: "Inter", "Inter Placeholder", sans-serif;
+      --framer-font-open-type-features: 'blwf' on, 'cv09' on, 'cv03' on, 'cv04' on, 'cv11' on;
+      --framer-font-size: 12px;
+      --framer-font-weight: 400;
+      --framer-letter-spacing: -0.05em;
+      --framer-line-height: 150%;
+      --framer-text-alignment: start;
+      --framer-text-color: var(--token-2007957d-a074-4c0c-8a33-8d85ed1ba0fd, #000);
+      --framer-text-decoration: none;
+      --framer-text-transform: none;
+    }
+
+    /* === Footer Link Hover === */
+    .framer-styles-preset-1xx7n8a:not(.rich-text-wrapper),
+    .framer-xFegV .framer-styles-preset-1xx7n8a.rich-text-wrapper a {
+      --framer-link-hover-text-color: var(--token-0a9a84c4-70a7-4ce1-a76e-6e1911018c59, #2a2b2fb3);
+      --framer-link-text-color: var(--token-6d5be345-cf23-4856-a078-3221a9f6ead3, #2a2b2f);
+      transition: color .4s cubic-bezier(.44, 0, .56, 1);
+    }
+  </style>
+
+  <!-- ═══════════════════════════════════════════════════════════
+     DESIGN SYSTEM NAV — isolated from original navbar
+     ═══════════════════════════════════════════════════════════ -->
+  <style id="ds-nav-styles">
+    .ds-nav {
+      position: sticky;
+      top: 0;
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      gap: 0;
+      padding: 10px 32px;
+      background: rgba(42, 43, 47, 0.92);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      overflow-x: auto;
+      white-space: nowrap;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      font-family: "Inter", "Inter Placeholder", sans-serif;
+    }
+
+    .ds-nav a {
+      color: rgba(254, 249, 239, 0.7);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: -0.03em;
+      padding: 6px 14px;
+      border-radius: 6px;
+      transition: color 0.25s ease, background 0.25s ease;
+      flex-shrink: 0;
+    }
+
+    .ds-nav a:hover,
+    .ds-nav a:focus {
+      color: #fef9ef;
+      background: rgba(254, 249, 239, 0.08);
+    }
+
+    .ds-nav .ds-logo {
+      color: #fef9ef;
+      font-weight: 600;
+      font-size: 14px;
+      margin-right: 16px;
+      padding: 6px 0;
+      opacity: 0.9;
+      letter-spacing: -0.04em;
+    }
+
+    .ds-nav::-webkit-scrollbar {
+      height: 0;
+    }
+
+    /* === Section Containers === */
+    .ds-section {
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 80px 48px;
+    }
+
+    .ds-section-full {
+      width: 100%;
+      padding: 0;
+    }
+
+    .ds-section-title {
+      font-family: "Inter", "Inter Placeholder", sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--token-73f2db1a-7507-497c-8ae8-8d245cb8f957, #C4A157);
+      margin-bottom: 12px;
+    }
+
+    .ds-section-heading {
+      font-family: "DM Sans", sans-serif;
+      font-size: 32px;
+      font-weight: 400;
+      letter-spacing: -0.06em;
+      line-height: 120%;
+      color: var(--token-6d5be345-cf23-4856-a078-3221a9f6ead3, #2a2b2f);
+      margin-bottom: 8px;
+    }
+
+    .ds-section-desc {
+      font-family: "Inter", "Inter Placeholder", sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      letter-spacing: -0.04em;
+      line-height: 160%;
+      color: var(--token-0a9a84c4-70a7-4ce1-a76e-6e1911018c59, #2a2b2fb3);
+      max-width: 560px;
+      margin-bottom: 48px;
+    }
+
+    .ds-divider {
+      height: 1px;
+      background: var(--token-6b5f02ce-77c5-459a-98a9-df47dd6bf4c9, #C4A1571f);
+      margin: 0 auto;
+      max-width: 1300px;
+    }
+
+    /* === Typography Spec Table === */
+    .ds-type-row {
+      display: flex;
+      align-items: baseline;
+      padding: 20px 0;
+      border-bottom: 1px solid var(--token-6b5f02ce-77c5-459a-98a9-df47dd6bf4c9, #C4A1571f);
+      gap: 24px;
+    }
+
+    .ds-type-label {
+      flex: 0 0 160px;
+      font-family: "Inter", "Inter Placeholder", sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      color: var(--token-0a9a84c4-70a7-4ce1-a76e-6e1911018c59, #2a2b2fb3);
+      text-transform: uppercase;
+    }
+
+    .ds-type-preview {
+      flex: 1;
+      min-width: 0;
+      overflow: hidden;
+    }
+
+    .ds-type-spec {
+      flex: 0 0 auto;
+      font-family: "Inter", "Inter Placeholder", sans-serif;
+      font-size: 12px;
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      color: var(--token-0a9a84c4-70a7-4ce1-a76e-6e1911018c59, #2a2b2fb3);
+      white-space: nowrap;
+      text-align: right;
+    }
+
+    /* === Color Swatches === */
+    .ds-swatches {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 16px;
+    }
+
+    .ds-swatch {
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--token-6b5f02ce-77c5-459a-98a9-df47dd6bf4c9, #C4A1571f);
+    }
+
+    .ds-swatch-color {
+      height: 80px;
+    }
+
+    .ds-swatch-info {
+      padding: 12px 14px;
+      background: var(--token-880f89e1-36c9-4265-a2f4-20ec3d5bd7ce, #fef9ef);
+    }
+
+    .ds-swatch-name {
+      font-family: "Inter", "Inter Placeholder", sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: -0.03em;
+      color: var(--token-6d5be345-cf23-4856-a078-3221a9f6ead3, #2a2b2f);
+    }
+
+    .ds-swatch-value {
+      font-family: "Inter", "Inter Placeholder", sans-serif;
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: 0;
+      color: var(--token-0a9a84c4-70a7-4ce1-a76e-6e1911018c59, #2a2b2fb3);
+      margin-top: 2px;
+    }
+
+    /* === Component Row === */
+    .ds-component-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+
+    .ds-component-label {
+      font-family: "Inter", "Inter Placeholder", sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--token-0a9a84c4-70a7-4ce1-a76e-6e1911018c59, #2a2b2fb3);
+      width: 100%;
+      margin-bottom: 4px;
+    }
+
+    /* === Button Styles (from original) === */
+    .ds-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+      padding: 10px 20px;
+      border-radius: 50px;
+      text-decoration: none;
+      cursor: pointer;
+      border: 1px solid transparent;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      font-family: "DM Sans", sans-serif;
+      font-size: 16px;
+      font-weight: 500;
+      letter-spacing: -0.05em;
+      line-height: 150%;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      white-space: pre;
+    }
+
+    .ds-btn:hover {
+      opacity: 0.85;
+      transform: scale(0.98);
+    }
+
+    .ds-btn-primary {
+      background-color: #C4A157;
+      color: #fff;
+      box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.4), 0 4px 12px rgba(196, 161, 87, 0.3);
+      border: 1px solid #b8954d;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .ds-btn-primary::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -150%;
+      width: 50%;
+      height: 100%;
+      background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4) 50%, rgba(255, 255, 255, 0) 100%);
+      transform: skewX(-25deg);
+      animation: glass-shine 6s infinite ease-in-out;
+    }
+
+    @keyframes glass-shine {
+      0% {
+        left: -150%;
+      }
+
+      30% {
+        left: 250%;
+      }
+
+      100% {
+        left: 250%;
+      }
+    }
+
+    .ds-btn-primary:hover::after {
+      animation: glass-shine-hover 1.2s ease-in-out;
+    }
+
+    @keyframes glass-shine-hover {
+      0% {
+        left: -150%;
+      }
+
+      100% {
+        left: 250%;
+      }
+    }
+
+    .ds-btn-secondary {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.05) 100%);
+      color: #fff;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-top: 1px solid rgba(255, 255, 255, 0.6);
+      border-left: 1px solid rgba(255, 255, 255, 0.6);
+      backdrop-filter: blur(20px) saturate(160%);
+      -webkit-backdrop-filter: blur(20px) saturate(160%);
+      box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.5), 0 8px 32px rgba(0, 0, 0, 0.2);
+    }
+
+    .ds-btn-xs {
+      padding: 8px 16px;
+      font-size: 16px;
+    }
+
+    .ds-btn-lg {
+      padding: 16px 32px;
+      font-size: 16px;
+    }
+
+    /* === Tag / Pill === */
+    .ds-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 14px;
+      border-radius: 50px;
+      font-family: "Inter", "Inter Placeholder", sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: -0.05em;
+      line-height: 150%;
+    }
+
+    .ds-tag-cream {
+      background-color: var(--token-880f89e1-36c9-4265-a2f4-20ec3d5bd7ce, #fef9ef);
+      color: var(--token-6d5be345-cf23-4856-a078-3221a9f6ead3, #2a2b2f);
+    }
+
+    .ds-tag-glass {
+      background-color: var(--token-44e26cfa-2594-4e6d-9dc9-f6f3f293e1ee, rgba(254, 249, 239, 0.24));
+      color: var(--token-880f89e1-36c9-4265-a2f4-20ec3d5bd7ce, #fef9ef);
+      backdrop-filter: blur(50px);
+      -webkit-backdrop-filter: blur(50px);
+    }
+
+    /* === Input (from original form styles) === */
+    .ds-input-wrapper {
+      position: relative;
+      overflow: hidden;
+      border-radius: 50px;
+      background: var(--token-880f89e1-36c9-4265-a2f4-20ec3d5bd7ce, #fef9ef);
+    }
+
+    .ds-input-wrapper::after {
+      content: "";
+      pointer-events: none;
+      box-sizing: border-box;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 50px;
+      border: 1px solid #C4A1571f;
+      transition: border-color 0.3s cubic-bezier(.44, 0, .56, 1);
+    }
+
+    .ds-input-wrapper:focus-within::after {
+      border-color: #C4A15752;
+    }
+
+    .ds-input {
+      width: 100%;
+      padding: 12px 16px;
+      background: transparent;
+      border: none;
+      font-family: "Inter", "Inter Placeholder", sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      letter-spacing: -0.04em;
+      line-height: 150%;
+      color: var(--token-6d5be345-cf23-4856-a078-3221a9f6ead3, #2a2b2f);
+      outline: none;
+    }
+
+    .ds-input::placeholder {
+      color: var(--token-0a9a84c4-70a7-4ce1-a76e-6e1911018c59, #2a2b2fb3);
+    }
+
+    /* === Layout Demo === */
+    .ds-layout-demo {
+      border: 1px dashed var(--token-6b5f02ce-77c5-459a-98a9-df47dd6bf4c9, #C4A1571f);
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 24px;
+    }
+
+    .ds-layout-label {
+      font-family: "Inter", "Inter Placeholder", sans-serif;
+      font-size: 11px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--token-73f2db1a-7507-497c-8ae8-8d245cb8f957, #C4A157);
+      margin-bottom: 12px;
+    }
+
+    .ds-grid-demo {
+      display: grid;
+      gap: 16px;
+    }
+
+    .ds-grid-cell {
+      background: var(--token-8ee275ec-326d-4bf1-adfb-1bdb25eaaa6f, #f5ede1);
+      border-radius: 8px;
+      padding: 24px;
+      min-height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: "Inter", "Inter Placeholder", sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--token-0a9a84c4-70a7-4ce1-a76e-6e1911018c59, #2a2b2fb3);
+      letter-spacing: -0.03em;
+    }
+
+    /* === Motion Gallery === */
+    .ds-motion-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 16px;
+    }
+
+    .ds-motion-card {
+      background: var(--token-8ee275ec-326d-4bf1-adfb-1bdb25eaaa6f, #f5ede1);
+      border-radius: 16px;
+      padding: 32px 20px;
+      text-align: center;
+      cursor: pointer;
+      transition: transform 0.4s cubic-bezier(.44, 0, .56, 1), box-shadow 0.4s cubic-bezier(.44, 0, .56, 1);
+    }
+
+    .ds-motion-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 32px rgba(196, 161, 87, 0.08);
+    }
+
+    .ds-motion-card-title {
+      font-family: "Inter", "Inter Placeholder", sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--token-6d5be345-cf23-4856-a078-3221a9f6ead3, #2a2b2f);
+      letter-spacing: -0.03em;
+      margin-bottom: 4px;
+    }
+
+    .ds-motion-card-desc {
+      font-family: "Inter", "Inter Placeholder", sans-serif;
+      font-size: 12px;
+      font-weight: 400;
+      color: var(--token-0a9a84c4-70a7-4ce1-a76e-6e1911018c59, #2a2b2fb3);
+      letter-spacing: -0.02em;
+    }
+
+    .ds-motion-demo {
+      width: 48px;
+      height: 48px;
+      margin: 0 auto 16px;
+      background: var(--token-73f2db1a-7507-497c-8ae8-8d245cb8f957, #C4A157);
+      border-radius: 12px;
+    }
+
+    /* === Animations (from original) === */
+    @keyframes rotate360 {
+      from {
+        transform: translate3d(-50%, -50%, 0) rotate(0deg);
+      }
+
+      to {
+        transform: translate3d(-50%, -50%, 0) rotate(360deg);
+      }
+    }
+
+    @keyframes counterRotate360 {
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(-360deg);
+      }
+    }
+
+    @keyframes ds-fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px) scale(0.98);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    @keyframes ds-spin {
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .ds-anim-fadeup {
+      opacity: 0;
+    }
+
+    .ds-anim-fadeup.is-visible {
+      animation: ds-fadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) both;
+    }
+
+    .ds-treatment-card {
+      opacity: 0;
+      transform: translateY(60px);
+      filter: blur(4px);
+      background: var(--token-8ee275ec-326d-4bf1-adfb-1bdb25eaaa6f, #f5ede1);
+      border-radius: 16px;
+      padding: 32px 20px;
+      text-align: center;
+      transition: none;
+    }
+
+    .ds-treatment-card:hover {
+      transform: none;
+      box-shadow: none;
+    }
+
+    .ds-treatment-card>.edge-light {
+      display: none !important;
+    }
+
+    .ds-anim-spin {
+      animation: ds-spin 3s linear infinite;
+    }
+
+    .ds-anim-orbit {
+      animation: rotate360 12s linear infinite;
+    }
+
+    .ds-anim-orbit-counter {
+      animation: counterRotate360 12s linear infinite;
+    }
+
+    /* Hero Section — reusing original structure within design system */
+    .ds-hero-wrapper {
+      position: relative;
+      width: 100%;
+      min-height: 100vh;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    .ds-hero-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+    }
+
+    .ds-hero-content {
+      position: relative;
+      z-index: 1;
+      padding: 80px 48px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      text-align: left;
+      gap: 120px;
+      width: 100%;
+      max-width: 1600px;
+      margin: 0 auto;
+    }
+
+    .ds-hero-text-col {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      flex: 0 1 auto;
+    }
+
+    .ds-hero-card-col {
+      flex: 0 0 auto;
+      display: flex;
+      justify-content: flex-end;
+      margin-left: auto;
+    }
+
+    .card-spotlight {
+      position: relative;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      background-color: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(20px) saturate(160%);
+      -webkit-backdrop-filter: blur(20px) saturate(160%);
+      padding: 12px 32px 12px 12px;
+      overflow: hidden;
+      width: fit-content;
+      max-width: 400px;
+      --mouse-x: 50%;
+      --mouse-y: 50%;
+      --spotlight-color: rgba(196, 161, 87, 0.3);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      text-decoration: none;
+      transition: background-color 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), border 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+
+    .card-spotlight:hover {
+      transform: translateY(-4px);
+      background-color: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      box-shadow: 0 24px 48px rgba(0, 0, 0, 0.4), 0 0 30px rgba(196, 161, 87, 0.15);
+    }
+
+    .card-spotlight::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(circle at var(--mouse-x) var(--mouse-y), var(--spotlight-color), transparent 80%);
+      opacity: 0;
+      transition: opacity 0.5s ease;
+      pointer-events: none;
+    }
+
+    .card-spotlight:hover::before,
+    .card-spotlight:focus-within::before {
+      opacity: 0.8;
+    }
+
+    .card-spotlight-content {
+      color: #fff;
+      font-family: "DM Sans", sans-serif;
+      position: relative;
+      z-index: 1;
+    }
+
+    .card-spotlight-content h3 {
+      font-family: "Playfair Display", serif;
+      font-size: 32px;
+      margin-bottom: 16px;
+      color: #E6C875;
+    }
+
+    .ds-hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 16px;
+      border-radius: 50px;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.05) 100%);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-top: 1px solid rgba(255, 255, 255, 0.5);
+      border-left: 1px solid rgba(255, 255, 255, 0.5);
+      backdrop-filter: blur(20px) saturate(160%);
+      -webkit-backdrop-filter: blur(20px) saturate(160%);
+      box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.4), 0 4px 12px rgba(0, 0, 0, 0.1);
+      width: fit-content;
+    }
+
+    .ds-hero-badge p {
+      font-family: "Inter", "Inter Placeholder", sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: -0.05em;
+      line-height: 150%;
+      color: var(--token-880f89e1-36c9-4265-a2f4-20ec3d5bd7ce, #fef9ef);
+      margin: 0;
+    }
+
+    .ds-hero-heading {
+      font-family: "Playfair Display", serif;
+      font-size: 90px;
+      font-weight: 400;
+      letter-spacing: -0.03em;
+      line-height: 100%;
+      color: var(--token-880f89e1-36c9-4265-a2f4-20ec3d5bd7ce, #fef9ef);
+      max-width: 500px;
+    }
+
+    .ds-hero-subheading {
+      font-family: "DM Sans", sans-serif;
+      font-size: 20px;
+      font-weight: 400;
+      letter-spacing: -0.05em;
+      line-height: 150%;
+      color: var(--token-8ee275ec-326d-4bf1-adfb-1bdb25eaaa6f, #f5ede1);
+      max-width: 420px;
+    }
+
+    .ds-hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      gap: 16px;
+      margin-top: 24px;
+    }
+
+    .ds-hero-stats {
+      display: flex;
+      gap: 48px;
+      padding-top: 32px;
+    }
+
+    .ds-hero-stat h2 {
+      font-family: "Inter", "Inter Placeholder", sans-serif;
+      font-size: 40px;
+      font-weight: 400;
+      letter-spacing: -0.07em;
+      line-height: 110%;
+      color: var(--token-880f89e1-36c9-4265-a2f4-20ec3d5bd7ce, #fef9ef);
+      margin: 0;
+    }
+
+    .ds-hero-stat p {
+      font-family: "Inter", "Inter Placeholder", sans-serif;
+      font-size: 18px;
+      font-weight: 400;
+      letter-spacing: -0.05em;
+      line-height: 150%;
+      color: var(--token-8ee275ec-326d-4bf1-adfb-1bdb25eaaa6f, #f5ede1);
+      margin: 0;
+    }
+
+    /* === Navbar Demo (from original nav) === */
+    .ds-navbar-demo {
+      position: relative;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      padding: 24px 64px;
+      font-family: "DM Sans", sans-serif;
+    }
+
+    .ds-navbar-links {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      justify-self: center;
+    }
+
+    .ds-navbar-link {
+      font-size: 16px;
+      font-weight: 500;
+      letter-spacing: -0.05em;
+      line-height: 150%;
+      text-decoration: none;
+      padding: 4px 8px;
+      border-radius: 8px;
+      transition: opacity 0.3s ease;
+    }
+
+    .ds-navbar-link:hover {
+      color: var(--token-73f2db1a-7507-497c-8ae8-8d245cb8f957, #C4A157) !important;
+      opacity: 1;
+    }
+
+    .ds-navbar-center {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+    }
+
+    .ds-navbar-logo {
+      width: 56px;
+      height: 56px;
+      object-fit: cover;
+    }
+
+    /* === Footer Demo === */
+    .ds-footer-demo {
+      background-color: var(--token-8ee275ec-326d-4bf1-adfb-1bdb25eaaa6f, #f5ede1);
+      padding: 80px 64px;
+      width: 100%;
+    }
+
+    .ds-footer-heading {
+      text-align: center;
+      margin-bottom: 16px;
+    }
+
+    .ds-footer-cta {
+      text-align: center;
+      margin-bottom: 64px;
+    }
+
+    /* === Clinic Section (Masonry & Features) === */
+    .ds-clinic-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .ds-clinic-grid>div {
+      min-width: 0;
+    }
+
+    .ds-clinic-features {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 32px;
+      width: 100%;
+    }
+
+    .ds-clinic-carousel::-webkit-scrollbar {
+      display: none;
+    }
+
+    .ds-clinic-carousel-wrapper button:hover {
+      background: #fff !important;
+      transform: translateY(-50%) scale(1.05) !important;
+    }
+
+    /* Mobile Menu Styles */
+    .ds-mobile-menu-btn {
+      display: none;
+      width: 48px;
+      height: 48px;
+      cursor: pointer;
+      border: none;
+      align-items: center;
+      justify-content: center;
+      border-radius: 9999px;
+      background: transparent;
+      transition: all 0.4s ease;
+      position: relative;
+      z-index: 101;
+    }
+    .ds-mobile-menu-btn svg {
+      transition: color 0.4s ease;
+      color: var(--token-880f89e1-36c9-4265-a2f4-20ec3d5bd7ce, #fef9ef);
+    }
+    .ds-mobile-menu-btn.nav-scrolled {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.1) 100%);
+      backdrop-filter: blur(24px) saturate(180%) contrast(110%);
+      -webkit-backdrop-filter: blur(24px) saturate(180%) contrast(110%);
+      box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.8), inset 0 -1px 1px rgba(255, 255, 255, 0.3);
+    }
+    .ds-mobile-menu-btn.nav-scrolled svg {
+      color: var(--token-6d5be345-cf23-4856-a078-3221a9f6ead3, #2a2b2f);
+    }
+    .ds-mobile-overlay {
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100vh;
+      background: rgba(42, 43, 47, 0.95);
+      backdrop-filter: blur(24px) saturate(180%);
+      -webkit-backdrop-filter: blur(24px) saturate(180%);
+      z-index: 100;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.4s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 32px;
+    }
+    .ds-mobile-overlay.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .ds-mobile-link {
+      font-family: 'Playfair Display', serif;
+      font-size: 32px;
+      font-weight: 400;
+      color: #fff;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    .ds-mobile-overlay.active .ds-mobile-link {
+      transform: translateY(0);
+      opacity: 1;
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .ds-mobile-overlay.active .ds-mobile-link:nth-child(1) { transition-delay: 0.1s; }
+    .ds-mobile-overlay.active .ds-mobile-link:nth-child(2) { transition-delay: 0.15s; }
+    .ds-mobile-overlay.active .ds-mobile-link:nth-child(3) { transition-delay: 0.2s; }
+    .ds-mobile-overlay.active .ds-mobile-link:nth-child(4) { transition-delay: 0.25s; }
+    .ds-mobile-overlay.active .ds-mobile-link:nth-child(5) { transition-delay: 0.3s; }
+    .ds-mobile-overlay.active .ds-mobile-link:nth-child(6) { transition-delay: 0.35s; }
+
+    /* Responsive */
+    @media (max-width: 809px) {
+      .ds-navbar-demo {
+        padding: 24px 20px !important;
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+      }
+      .ds-hero-overlay {
+        background: linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.85) 100%) !important;
+      }
+      .ds-section {
+        padding: 40px 20px;
+      }
+      .ds-navbar-links, .ds-desktop-only {
+        display: none !important;
+      }
+      .ds-mobile-menu-btn {
+        display: flex;
+      }
+      .ds-hero-heading {
+        font-size: clamp(32px, 8.5vw, 42px) !important;
+        white-space: normal !important;
+        line-height: 1.15 !important;
+        max-width: 100% !important;
+        text-align: center;
+      }
+      .ds-hero-subheading {
+        text-align: center;
+        margin: 16px auto 0 !important;
+        font-size: 16px !important;
+        line-height: 1.5 !important;
+        max-width: 100% !important;
+      }
+      .ds-hero-text-col {
+        align-items: center;
+        text-align: center;
+      }
+      .ds-hero-buttons {
+        flex-direction: column-reverse; /* Primary on top */
+        width: 100%;
+        gap: 12px;
+        margin-top: 24px;
+      }
+      .ds-hero-buttons .ds-btn {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        padding: 16px 24px;
+        font-size: 16px;
+      }
+      .ds-hero-card-col {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-top: 16px;
+        margin-left: 0 !important;
+      }
+      #hero-spotlight-card {
+        width: auto;
+        max-width: 100%;
+      }
+      .ds-hero-stats {
+        flex-direction: column;
+        gap: 24px;
+      }
+      .ds-type-row {
+        flex-direction: column;
+        gap: 8px;
+      }
+      .ds-type-label {
+        flex: none;
+      }
+      .ds-type-spec {
+        text-align: left;
+      }
+      .ds-swatches {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .ds-hero-content {
+        padding: 100px 20px 40px;
+        flex-direction: column;
+        justify-content: center;
+        gap: 32px;
+      }
+      .ds-clinic-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+      .ds-clinic-features {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* --- Border Glow Integration for .ds-motion-card --- */
+    .ds-motion-card {
+      --edge-proximity: 0;
+      --cursor-angle: 45deg;
+      --edge-sensitivity: 30;
+      --color-sensitivity: calc(var(--edge-sensitivity) + 20);
+      --glow-padding: 30px;
+      --cone-spread: 25;
+      --card-bg: #fef9ef;
+
+      isolation: isolate;
+      position: relative;
+      background: var(--card-bg);
+      overflow: visible !important;
+      border-radius: 16px;
+    }
+
+    .ds-motion-card::before,
+    .ds-motion-card::after,
+    .ds-motion-card>.edge-light {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      transition: opacity 0.25s ease-out;
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    .ds-motion-card:not(:hover):not(.sweep-active)::before,
+    .ds-motion-card:not(:hover):not(.sweep-active)::after,
+    .ds-motion-card:not(:hover):not(.sweep-active)>.edge-light {
+      opacity: 0;
+      transition: opacity 0.75s ease-in-out;
+    }
+
+    .ds-motion-card::before {
+      border: 1px solid transparent;
+      background:
+        linear-gradient(var(--card-bg) 0 100%) padding-box,
+        linear-gradient(rgb(255 255 255 / 0%) 0% 100%) border-box,
+        radial-gradient(at 80% 55%, #E6C875 0px, transparent 50%) border-box,
+        radial-gradient(at 69% 34%, #C4A157 0px, transparent 50%) border-box,
+        radial-gradient(at 8% 6%, #E6C875 0px, transparent 50%) border-box,
+        radial-gradient(at 41% 38%, #C4A157 0px, transparent 50%) border-box,
+        radial-gradient(at 86% 85%, #E6C875 0px, transparent 50%) border-box,
+        radial-gradient(at 82% 18%, #C4A157 0px, transparent 50%) border-box,
+        radial-gradient(at 51% 4%, #E6C875 0px, transparent 50%) border-box,
+        linear-gradient(#C4A157 0 100%) border-box;
+      opacity: calc((var(--edge-proximity) - var(--color-sensitivity)) / (100 - var(--color-sensitivity)));
+      mask-image: conic-gradient(from var(--cursor-angle) at center,
+          black calc(var(--cone-spread) * 1%),
+          transparent calc((var(--cone-spread) + 15) * 1%),
+          transparent calc((100 - var(--cone-spread) - 15) * 1%),
+          black calc((100 - var(--cone-spread)) * 1%));
+      -webkit-mask-image: conic-gradient(from var(--cursor-angle) at center,
+          black calc(var(--cone-spread) * 1%),
+          transparent calc((var(--cone-spread) + 15) * 1%),
+          transparent calc((100 - var(--cone-spread) - 15) * 1%),
+          black calc((100 - var(--cone-spread)) * 1%));
+    }
+
+    .ds-motion-card::after {
+      border: 1px solid transparent;
+      background:
+        radial-gradient(at 80% 55%, #E6C875 0px, transparent 50%) padding-box,
+        radial-gradient(at 69% 34%, #C4A157 0px, transparent 50%) padding-box,
+        radial-gradient(at 8% 6%, #E6C875 0px, transparent 50%) padding-box,
+        radial-gradient(at 41% 38%, #C4A157 0px, transparent 50%) padding-box,
+        radial-gradient(at 86% 85%, #E6C875 0px, transparent 50%) padding-box,
+        radial-gradient(at 82% 18%, #C4A157 0px, transparent 50%) padding-box,
+        radial-gradient(at 51% 4%, #E6C875 0px, transparent 50%) padding-box,
+        linear-gradient(#C4A157 0 100%) padding-box;
+      mask-image:
+        linear-gradient(to bottom, black, black),
+        radial-gradient(ellipse at 50% 50%, black 40%, transparent 65%),
+        radial-gradient(ellipse at 66% 66%, black 5%, transparent 40%),
+        radial-gradient(ellipse at 33% 33%, black 5%, transparent 40%),
+        radial-gradient(ellipse at 66% 33%, black 5%, transparent 40%),
+        radial-gradient(ellipse at 33% 66%, black 5%, transparent 40%),
+        conic-gradient(from var(--cursor-angle) at center, transparent 5%, black 15%, black 85%, transparent 95%);
+      -webkit-mask-image:
+        linear-gradient(to bottom, black, black),
+        radial-gradient(ellipse at 50% 50%, black 40%, transparent 65%),
+        radial-gradient(ellipse at 66% 66%, black 5%, transparent 40%),
+        radial-gradient(ellipse at 33% 33%, black 5%, transparent 40%),
+        radial-gradient(ellipse at 66% 33%, black 5%, transparent 40%),
+        radial-gradient(ellipse at 33% 66%, black 5%, transparent 40%),
+        conic-gradient(from var(--cursor-angle) at center, transparent 5%, black 15%, black 85%, transparent 95%);
+      mask-composite: subtract, add, add, add, add, add;
+      -webkit-mask-composite: source-out, source-over, source-over, source-over, source-over, source-over;
+      opacity: calc(0.3 * (var(--edge-proximity) - var(--color-sensitivity)) / (100 - var(--color-sensitivity)));
+      mix-blend-mode: normal;
+    }
+
+    .ds-motion-card>.edge-light {
+      inset: calc(var(--glow-padding) * -1);
+      pointer-events: none;
+      z-index: -2;
+      mask-image: conic-gradient(from var(--cursor-angle) at center, black 2.5%, transparent 10%, transparent 90%, black 97.5%);
+      -webkit-mask-image: conic-gradient(from var(--cursor-angle) at center, black 2.5%, transparent 10%, transparent 90%, black 97.5%);
+      opacity: calc((var(--edge-proximity) - var(--edge-sensitivity)) / (100 - var(--edge-sensitivity)));
+      mix-blend-mode: normal;
+    }
+
+    .ds-motion-card>.edge-light::before {
+      content: "";
+      position: absolute;
+      inset: var(--glow-padding);
+      border-radius: inherit;
+      box-shadow:
+        inset 0 0 0 1px hsl(40deg 80% 60% / 100%),
+        inset 0 0 1px 0 hsl(40deg 80% 60% / 60%),
+        inset 0 0 3px 0 hsl(40deg 80% 60% / 50%),
+        inset 0 0 6px 0 hsl(40deg 80% 60% / 40%),
+        inset 0 0 15px 0 hsl(40deg 80% 60% / 30%),
+        inset 0 0 25px 2px hsl(40deg 80% 60% / 20%),
+        inset 0 0 50px 2px hsl(40deg 80% 60% / 10%),
+        0 0 1px 0 hsl(40deg 80% 60% / 60%),
+        0 0 3px 0 hsl(40deg 80% 60% / 50%),
+        0 0 6px 0 hsl(40deg 80% 60% / 40%),
+        0 0 15px 0 hsl(40deg 80% 60% / 30%),
+        0 0 25px 2px hsl(40deg 80% 60% / 20%),
+        0 0 50px 2px hsl(40deg 80% 60% / 10%);
+    }
+
+    /* Glass Navbar Pill Scrolled State */
+    .nav-pill-glass {
+      display: inline-flex;
+      align-items: center;
+      gap: 20px;
+      padding: 12px 32px;
+      border-radius: 9999px;
+      /* Pill shape */
+      background: transparent;
+      backdrop-filter: blur(0px) saturate(100%);
+      -webkit-backdrop-filter: blur(0px) saturate(100%);
+      box-shadow: inset 0 0px 0px rgba(255, 255, 255, 0), 0 0px 0px rgba(0, 0, 0, 0);
+      border: 1px solid transparent;
+      transition: background 0.4s ease, backdrop-filter 0.4s ease, -webkit-backdrop-filter 0.4s ease, box-shadow 0.4s ease, border 0.4s ease;
+    }
+
+    .nav-pill-glass.nav-scrolled {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.1) 100%);
+      backdrop-filter: blur(24px) saturate(180%) contrast(110%);
+      -webkit-backdrop-filter: blur(24px) saturate(180%) contrast(110%);
+      box-shadow:
+        inset 0 1px 2px rgba(255, 255, 255, 0.8),
+        inset 0 -1px 1px rgba(255, 255, 255, 0.3),
+        0 8px 32px rgba(0, 0, 0, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.5);
+    }
+
+    .nav-pill-glass.nav-scrolled .ds-navbar-link {
+      color: #2a2b2f !important;
+      font-weight: 600;
+    }
+
+    .nav-pill-glass.nav-scrolled .ds-navbar-link:hover {
+      color: var(--token-73f2db1a-7507-497c-8ae8-8d245cb8f957, #C4A157) !important;
+    }
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+    rel="stylesheet">
 </head>
 
-<body> <!-- Progress Bar -->
-    <div class="scroll-progress" id="scrollProgress"></div> <!-- Header -->
-    <header class="header" id="header">
-        <div class="header-inner">
-            <div class="logo"> <img src="/.netlify/images?url=/apmed-estetica/imagens/logo.png&w=400&q=90"
-                    alt="Apmed Estética" width="200" height="40" loading="eager">
+<body>
+
+  <section id="hero" class="ds-section-full">
+    <div class="ds-hero-wrapper">
+      <!-- Background image -->
+      <img id="hero-bg-img" class="ds-hero-video" src="assets/3.webp" alt="Hero Background"
+        style="object-fit:cover;width:100%;height:100%;position:absolute;top:0;left:0;z-index:0;" />
+      <!-- Background overlay for readability -->
+      <div class="ds-hero-overlay"
+        style="position:absolute;inset:0;background:linear-gradient(to right, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.1) 100%);z-index:0;pointer-events:none;">
+      </div>
+
+      <!-- Original navbar over hero (transparent) -->
+      <div id="hero-navbar"
+        style="position:fixed;top:0;left:0;width:100%;z-index:100;display:flex;justify-content:center;">
+        <div class="ds-navbar-demo" style="max-width:1300px;width:100%;background:transparent;">
+          <div class="ds-navbar-logo-wrapper" style="display:flex;justify-self:start;">
+            <a href="#hero" style="display:flex;align-items:center;text-decoration:none;">
+              <img class="ds-navbar-logo" src="assets/LOGO.webp" alt="Holistic Logo"
+                style="border-radius: 9999px; object-fit: cover;" />
+            </a>
+          </div>
+          <div class="ds-navbar-links" style="gap: 0;">
+            <div class="nav-pill-glass" id="nav-options-pill">
+              <a href="#hero" class="ds-navbar-link"
+                style="color:var(--token-880f89e1-36c9-4265-a2f4-20ec3d5bd7ce, #fef9ef);transition: color 0.3s ease;">Início</a>
+              <a href="#sobre-nos" class="ds-navbar-link"
+                style="color:var(--token-880f89e1-36c9-4265-a2f4-20ec3d5bd7ce, #fef9ef);transition: color 0.3s ease;">Sobre
+                Nós</a>
+              <a href="#tratamentos" class="ds-navbar-link"
+                style="color:var(--token-880f89e1-36c9-4265-a2f4-20ec3d5bd7ce, #fef9ef);transition: color 0.3s ease;">Tratamentos</a>
+              <a href="#clinica" class="ds-navbar-link"
+                style="color:var(--token-880f89e1-36c9-4265-a2f4-20ec3d5bd7ce, #fef9ef);transition: color 0.3s ease;">Clínica</a>
+              <a href="#contato" class="ds-navbar-link"
+                style="color:var(--token-880f89e1-36c9-4265-a2f4-20ec3d5bd7ce, #fef9ef);transition: color 0.3s ease;">Contato</a>
             </div>
-            <nav class="nav"> <a href="#" class="nav-link">Inicial</a> <a href="#sobre" class="nav-link">Sobre</a> <a
-                    href="#procedimentos" class="nav-link">Procedimentos</a> <a href="#clinica"
-                    class="nav-link">Clínica</a> <a href="#contato" class="nav-link">Contato</a> </nav> <a
-                href="#contato" class="btn btn-primary btn-header">Agendar Agora</a> <!-- Mobile Hamburger --> <button
-                class="hamburger" id="hamburger" aria-label="Abrir menu"> <span class="hamburger-bar"></span> <span
-                    class="hamburger-bar"></span> <span class="hamburger-bar"></span> </button>
+          </div>
+          <div style="display:flex;justify-self:end;align-items:center;gap:16px;">
+            <a href="https://api.whatsapp.com/send/?phone=559284604242&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" class="ds-btn ds-btn-primary ds-btn-xs ds-desktop-only">Agendar Avaliação</a>
+            <button id="mobile-menu-btn" class="ds-mobile-menu-btn">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+              </svg>
+            </button>
+          </div>
         </div>
-    </header> <!-- Mobile Menu Overlay -->
-    <div class="mobile-menu" id="mobileMenu">
-        <nav class="mobile-menu-nav"> <a href="#" class="mobile-menu-link">Inicial</a> <a href="#sobre"
-                class="mobile-menu-link">Sobre</a> <a href="#procedimentos" class="mobile-menu-link">Procedimentos</a>
-            <a href="#clinica" class="mobile-menu-link">Clínica</a> <a href="#contato"
-                class="mobile-menu-link">Contato</a> <a href="#contato" class="btn btn-primary mobile-menu-cta">Agendar
-                Agora</a>
-        </nav>
-    </div> <!-- Hero Section -->
-    <section class="hero">
-        <img src="/.netlify/images?url=/apmed-estetica/imagens/hero-bg.webp&w=1920" srcset="/.netlify/images?url=/apmed-estetica/imagens/hero-bg.webp&w=600 600w, 
-                 /.netlify/images?url=/apmed-estetica/imagens/hero-bg.webp&w=1200 1200w, 
-                 /.netlify/images?url=/apmed-estetica/imagens/hero-bg.webp&w=1920 1920w" sizes="100vw"
-            alt="Ambiente da Clínica Apmed Estética" class="hero-bg-img" width="1920" height="1080" fetchpriority="high"
-            decoding="async">
-        <div class="hero-overlay"></div>
-        <div class="container hero-content">
-            <div class="hero-bottom">
-                <div class="hero-text"> <span class="hero-tagline">Estética Avançada</span>
-                    <h1 class="headline"> Realce sua Beleza, <span class="text-gold headline-italic">Eleve sua
-                            Autoestima</span> </h1>
-                    <p class="subheadline"> Tratamentos faciais e corporais personalizados com tecnologia e cuidado
-                        profissional. </p>
-                    <div class="hero-actions"> <a href="#contato" class="btn-gold"> <span class="btn-text">Agendar
-                                Avaliação</span> <span class="btn-gold__icon" aria-hidden="true"> </span> </a> </div>
-                </div>
-                <div class="hero-right">
-                    <p class="hero-desc"> Tecnologia avançada e resultados naturais para você. </p> <a href="#sobre"
-                        class="floating-card">
-                        <div class="glass-left">
-                            <div class="glass-icon"> <span class="icon-star">&#9733;</span> <svg class="icon-arrow"
-                                    xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <path d="M5 12h14" />
-                                    <path d="m12 5 7 7-7 7" />
-                                </svg> </div>
-                            <div class="glass-text"> <span class="glass-title">O cuidado que você merece</span> <span
-                                    class="glass-subtitle">Saiba mais</span> </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
+      </div>
+
+      <!-- MOBILE MENU OVERLAY -->
+      <div id="mobile-menu-overlay" class="ds-mobile-overlay">
+        <button id="mobile-menu-close-btn" style="position: absolute; top: 24px; right: 20px; background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2); cursor: pointer; padding: 12px; border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 102; transition: all 0.3s ease;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+        <a href="#hero" class="ds-mobile-link">Início</a>
+        <a href="#sobre-nos" class="ds-mobile-link">Sobre Nós</a>
+        <a href="#tratamentos" class="ds-mobile-link">Tratamentos</a>
+        <a href="#clinica" class="ds-mobile-link">Clínica</a>
+        <a href="#contato" class="ds-mobile-link">Contato</a>
+        <a href="https://api.whatsapp.com/send/?phone=559284604242&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" class="ds-btn ds-btn-primary ds-mobile-link" style="margin-top: 16px; width: 200px; text-align: center; justify-content: center; font-family: 'Inter', sans-serif; font-size: 16px;">Agendar Avaliação</a>
+      </div>
+
+      <div class="ds-hero-content">
+        <div class="ds-hero-text-col">
+          <div class="ds-hero-badge">
+            <p>Estética Avançada</p>
+          </div>
+          <div>
+            <h1 class="ds-hero-heading apmed-split-text ds-gradient-hero" style="max-width: 800px; white-space: nowrap;">
+              Sua melhor versão<br>começa aqui.</h1>
+            <p class="ds-hero-subheading" style="margin-top:16px;">
+              Especialistas em estética avançada para realçar sua beleza natural com segurança e tecnologia.
+            </p>
+          </div>
+          <div class="ds-hero-buttons">
+            <a href="#tratamentos" class="ds-btn ds-btn-secondary">Nossos Tratamentos</a>
+            <a href="https://api.whatsapp.com/send/?phone=559284604242&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" class="ds-btn ds-btn-primary">Agende sua Avaliação</a>
+          </div>
         </div>
-    </section> <!-- Sobre Nos Section -->
-    <section id="sobre" class="section sobre" style="scroll-margin-top: calc(var(--header-height) + 20px);">
-        <div class="container sobre-grid">
-            <div class="sobre-text-col" data-aos="fade-right">
-                <div class="sobre-decor-line" data-aos="fade-down" data-aos-delay="400"></div>
-                <span class="section-label"><span class="section-label-dot"></span>QUEM SOMOS</span>
-                <h2 class="section-title">Sobre <span class="text-gold">Nós</span></h2>
-                <div class="sobre-content-text">
 
-
-                    <p>Nossa clínica nasce do compromisso com a excelência, oferecendo tratamentos de alto padrão que
-                        unem tecnologia avançada, técnicas atualizadas e uma abordagem personalizada. Cada detalhe foi
-                        cuidadosamente pensado para proporcionar uma experiência exclusiva, confortável e acolhedora.
-                    </p>
-
-                    <p>Nossa equipe é formada por profissionais qualificadas, que prezam pela precisão técnica,
-                        segurança e resultados naturais:</p>
-
-                    <ul class="sobre-doctors">
-                        <li><strong>Dra. Ana Paula Alves</strong> – COREN 007470</li>
-                        <li><strong>Dra. Andressa Pires</strong> – COREN 216580</li>
-                    </ul>
-
-                    <p>Com sólida formação e constante atualização na área da estética, desenvolvemos protocolos
-                        individualizados que respeitam as características únicas de cada paciente, sempre priorizando
-                        ética, responsabilidade e excelência nos resultados.</p>
-
-                    <p>Mais do que procedimentos estéticos, entregamos sofisticação, bem-estar e autoestima elevada.</p>
-
-                    <p class="sobre-signature">Porque a sua melhor versão merece um cuidado à altura.</p>
-                </div> <a href="#clinica" class="btn btn-gold" style="margin-top: 2rem;">Conheça a Clínica</a>
+        <div class="ds-hero-card-col">
+          <a href="#sobre-nos" class="card-spotlight" id="hero-spotlight-card">
+            <div
+              style="width: 48px; height: 48px; border-radius: 50%; background: rgba(196, 161, 87, 0.15); display: flex; align-items: center; justify-content: center; position: relative; z-index: 1; border: 1px solid rgba(196, 161, 87, 0.3); box-shadow: inset 0 0 10px rgba(196, 161, 87, 0.1);">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="#E6C875" xmlns="http://www.w3.org/2000/svg"
+                style="filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));">
+                <path
+                  d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
+              </svg>
             </div>
-            <div class="sobre-image-col" data-aos="fade-left" data-aos-delay="200">
-                <div class="image-wrapper"> <img class="sobreimg"
-                        src="/.netlify/images?url=/apmed-estetica/imagens/quem somos.jpg&w=800&q=80"
-                        alt="Equipe Apmed Estética - Sobre Nós" width="800" height="600" loading="lazy"> </div>
+            <div class="card-spotlight-content" style="display: flex; flex-direction: column; justify-content: center;">
+              <p
+                style="font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 600; color: #fff; margin: 0; line-height: 1.2;">
+                O cuidado que você merece</p>
+              <p
+                style="font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 500; color: #C4A157; margin: 4px 0 0 0; line-height: 1.2;">
+                Saiba mais</p>
             </div>
+          </a>
         </div>
-    </section> <!-- Procedimentos Section -->
-    <section id="procedimentos" class="section procedimentos"
-        style="scroll-margin-top: calc(var(--header-height) + 20px);">
-        <div class="container">
-            <h2 class="section-title procedimentos-title" data-aos="fade-up">Nossos <span
-                    class="text-gold">Procedimentos</span></h2>
-            <div class="procedimentos-line" data-aos="fade-up" data-aos-delay="200"></div>
-            <!-- Faciais -->
-            <div class="proc-category" data-aos="fade-up" data-aos-delay="100"> <span class="proc-category-label"><span
-                        class="proc-dot"></span>Faciais</span>
-                <div class="proc-grid">
-                    <div class="proc-card" data-aos="fade-up" data-aos-delay="0"> <span class="proc-number">01</span>
-                        <h3 class="proc-name">Limpeza de Pele</h3>
-                        <p class="proc-desc">Higienização profunda, remoção de cravos e impurezas.</p>
-                    </div>
-                    <div class="proc-card" data-aos="fade-up" data-aos-delay="100"> <span class="proc-number">02</span>
-                        <h3 class="proc-name">Dermaplaning</h3>
-                        <p class="proc-desc">Esfoliação superficial para renovação da pele e melhor absorção de ativos.
-                        </p>
-                    </div>
-                    <div class="proc-card" data-aos="fade-up" data-aos-delay="200"> <span class="proc-number">03</span>
-                        <h3 class="proc-name">Microagulhamento</h3>
-                        <p class="proc-desc">Estímulo de colágeno, melhora de textura, manchas e cicatrizes.</p>
-                    </div>
-                    <div class="proc-card" data-aos="fade-up" data-aos-delay="0"> <span class="proc-number">04</span>
-                        <h3 class="proc-name">Toxina Botulínica</h3>
-                        <p class="proc-desc">Suavização de linhas de expressão e prevenção do envelhecimento.</p>
-                    </div>
-                    <div class="proc-card" data-aos="fade-up" data-aos-delay="100"> <span class="proc-number">05</span>
-                        <h3 class="proc-name">Fios de PDO</h3>
-                        <p class="proc-desc">Sustentação facial e estímulo de colágeno.</p>
-                    </div>
-                    <div class="proc-card" data-aos="fade-up" data-aos-delay="200"> <span class="proc-number">06</span>
-                        <h3 class="proc-name">Bioestimuladores</h3>
-                        <p class="proc-desc">Melhora da firmeza e qualidade da pele.</p>
-                    </div>
-                    <div class="proc-card" data-aos="fade-up" data-aos-delay="0"> <span class="proc-number">07</span>
-                        <h3 class="proc-name">Preenchimento Labial</h3>
-                        <p class="proc-desc">Volume, contorno e hidratação dos lábios.</p>
-                    </div>
-                    <div class="proc-card" data-aos="fade-up" data-aos-delay="100"> <span class="proc-number">08</span>
-                        <h3 class="proc-name">PRP - Terapia Regenerativa</h3>
-                        <p class="proc-desc">Rejuvenescimento com plasma rico em plaquetas.</p>
-                    </div>
-                    <div class="proc-card" data-aos="fade-up" data-aos-delay="200"> <span class="proc-number">09</span>
-                        <h3 class="proc-name">Retirada de Acrocordons</h3>
-                        <p class="proc-desc">Remoção de pequenas lesões benignas da pele.</p>
-                    </div>
-                </div>
-            </div> <!-- Corporais -->
-            <div class="proc-category" data-aos="fade-up" data-aos-delay="100"> <span class="proc-category-label"><span
-                        class="proc-dot"></span>Corporais</span>
-                <div class="proc-grid">
-                    <div class="proc-card" data-aos="fade-up" data-aos-delay="0"> <span class="proc-number">01</span>
-                        <h3 class="proc-name">Ativos Redutores de Gordura</h3>
-                        <p class="proc-desc">Auxílio na redução de gordura localizada.</p>
-                    </div>
-                    <div class="proc-card" data-aos="fade-up" data-aos-delay="100"> <span class="proc-number">02</span>
-                        <h3 class="proc-name">Massagem Manual</h3>
-                        <p class="proc-desc">Relaxamento, ativação circulatória e modelagem corporal.</p>
-                    </div>
-                    <div class="proc-card" data-aos="fade-up" data-aos-delay="200"> <span class="proc-number">03</span>
-                        <h3 class="proc-name">Bioestimulador de Colágeno</h3>
-                        <p class="proc-desc">Tratamento de flacidez em áreas como abdômen, glúteos e braços.</p>
-                    </div>
-                    <div class="proc-card" data-aos="fade-up" data-aos-delay="0"> <span class="proc-number">04</span>
-                        <h3 class="proc-name">Preenchimento Trocantérica</h3>
-                        <p class="proc-desc">Correção do afundamento lateral do quadril.</p>
-                    </div>
-                    <div class="proc-card" data-aos="fade-up" data-aos-delay="100"> <span class="proc-number">05</span>
-                        <h3 class="proc-name">Harmonização Glútea</h3>
-                        <p class="proc-desc">Volume, contorno e projeção dos glúteos.</p>
-                    </div> <!-- Card CTA especial -->
-                    <div class="proc-card proc-card-cta" data-aos="fade-up" data-aos-delay="200">
-                        <p class="proc-cta-text">Quer saber qual procedimento é ideal para você?</p> <span
-                            class="proc-cta-sub">Agende sua avaliação <svg width="16" height="16" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <path d="M7 17l9.2-9.2M17 17V8H8" />
-                            </svg></span>
-                    </div>
-                    <div class="proc-card" data-aos="fade-up" data-aos-delay="0"> <span class="proc-number">06</span>
-                        <h3 class="proc-name">Tratamento para Estrias e Flacidez</h3>
-                        <p class="proc-desc">Melhora da textura e firmeza da pele.</p>
-                    </div>
-                    <div class="proc-card" data-aos="fade-up" data-aos-delay="100"> <span class="proc-number">07</span>
-                        <h3 class="proc-name">PEIM (Microvasos)</h3>
-                        <p class="proc-desc">Tratamento de vasinhos aparentes.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> <!-- A Clinica Section -->
-    <section id="clinica" class="section clinica-v2" style="scroll-margin-top: calc(var(--header-height) + 20px);">
-        <div class="container clinica-v2-grid">
-            <div class="clinica-v2-image" data-aos="fade-right">
-                <div class="image-wrapper"> <img
-                        src="/.netlify/images?url=https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=800"
-                        alt="Instalações modernas da Apmed Estética" width="800" height="600" loading="lazy"> </div>
-            </div>
-            <div class="clinica-v2-content" data-aos="fade-left" data-aos-delay="200"> <span
-                    class="clinica-v2-label"><span class="proc-dot"></span>Nossa Clínica</span>
-                <h2 class="section-title">Conheça a <span class="text-gold">Apmed Estética</span></h2>
-                <p class="section-desc">Um espaço pensado para o seu bem-estar, com estrutura completa e ambiente
-                    acolhedor para você se sentir em casa.</p>
-                <div class="clinica-v2-benefits">
-                    <div class="clinica-v2-benefit">
-                        <div class="benefit-icon"> <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M12 2L2 7l10 5 10-5-10-5z" />
-                                <path d="M2 17l10 5 10-5" />
-                                <path d="M2 12l10 5 10-5" />
-                            </svg> </div>
-                        <div class="benefit-text">
-                            <h4>Tecnologia de Ponta</h4>
-                            <p>Equipamentos modernos para resultados superiores</p>
-                        </div>
-                    </div>
-                    <div class="clinica-v2-benefit">
-                        <div class="benefit-icon"> <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                <path
-                                    d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
-                            </svg> </div>
-                        <div class="benefit-text">
-                            <h4>Ambiente Acolhedor</h4>
-                            <p>Conforto e tranquilidade em cada detalhe</p>
-                        </div>
-                    </div>
-                    <div class="clinica-v2-benefit">
-                        <div class="benefit-icon"> <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
-                                <circle cx="9" cy="7" r="4" />
-                                <path d="M23 21v-2a4 4 0 00-3-3.87" />
-                                <path d="M16 3.13a4 4 0 010 7.75" />
-                            </svg> </div>
-                        <div class="benefit-text">
-                            <h4>Profissionais Qualificados</h4>
-                            <p>Equipe especializada e em constante atualização</p>
-                        </div>
-                    </div>
-                    <div class="clinica-v2-benefit">
-                        <div class="benefit-icon"> <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
-                                <polyline points="22 4 12 14.01 9 11.01" />
-                            </svg> </div>
-                        <div class="benefit-text">
-                            <h4>Atendimento Personalizado</h4>
-                            <p>Cada tratamento adaptado às suas necessidades</p>
-                        </div>
-                    </div>
-                </div>
+      </div>
 
-                <!-- Location Card Destaque -->
-                <div class="clinica-location-card">
-                    <div class="location-icon-wrapper">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                            <circle cx="12" cy="10" r="3"></circle>
-                        </svg>
-                    </div>
-                    <div class="location-content">
-                        <span class="location-label">Nossa Localização</span>
-                        <p class="location-address">Av. Jornalista Umberto Calderaro, 1169 - Sala 11<br>Manaus, Brazil
-                        </p>
-                        <a href="https://maps.google.com/?q=Av.+Jornalista+Umberto+Calderaro,+1169+-+Sala+11,+Manaus,+Brazil"
-                            target="_blank" class="location-link">Ver no Google Maps &rarr;</a>
-                    </div>
-                </div>
+      <script>
+        const spotlightCard = document.getElementById('hero-spotlight-card');
+        if (spotlightCard) {
+          spotlightCard.addEventListener('mousemove', e => {
+            const rect = spotlightCard.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            spotlightCard.style.setProperty('--mouse-x', `${x}px`);
+            spotlightCard.style.setProperty('--mouse-y', `${y}px`);
+          });
+        }
+      </script>
+    </div>
+  </section>
 
-                <div class="clinica-cta-wrapper">
-                    <a href="#contato" class="btn-gold clinica-v2-cta"> <span class="btn-text">Agendar Consulta</span>
-                    </a>
-                </div>
-            </div>
+  <div class="ds-divider"></div>
+  <section id="sobre-nos" class="ds-section">
+    <style>
+      @media (max-width: 809px) {
+        #sobre-nos .ds-grid-demo {
+          grid-template-columns: 1fr !important;
+          gap: 32px !important;
+        }
+
+        #sobre-nos .ds-grid-cell-img {
+          min-height: 400px !important;
+        }
+      }
+
+      .quem-somos-badge {
+        transition: transform 0.4s cubic-bezier(.44, 0, .56, 1), box-shadow 0.4s cubic-bezier(.44, 0, .56, 1);
+        cursor: pointer;
+      }
+
+      .quem-somos-badge:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 32px rgba(196, 161, 87, 0.15);
+      }
+    </style>
+    <div class="ds-grid-demo" style="grid-template-columns:1fr 1fr; gap: 64px; align-items: center;">
+      <div class="ds-grid-cell ds-grid-cell-img ds-anim-fadeup"
+        style="min-height:600px; background:url('assets/doutoras.webp') center/cover; border-radius:16px;"></div>
+      <div class="ds-grid-cell"
+        style="flex-direction:column; align-items:flex-start; gap:24px; padding:0; background:transparent;">
+        <div class="ds-tag quem-somos-badge ds-anim-fadeup"
+          style="animation-delay: 0.1s; font-size:12px;text-transform:uppercase;letter-spacing:0.1em;color:var(--token-73f2db1a-7507-497c-8ae8-8d245cb8f957,#C4A157);font-family: 'Inter', sans-serif; font-weight: 600; background: rgba(196, 161, 87, 0.1); border: 1px solid rgba(196, 161, 87, 0.2); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);">
+          Quem Somos</div>
+        <h2 class="ds-section-heading apmed-split-text"
+          style="font-family:'Playfair Display', serif; font-size: 48px; letter-spacing:-0.03em; margin-bottom: 0; color:var(--token-6d5be345-cf23-4856-a078-3221a9f6ead3,#2a2b2f);">
+          Sobre <span class="ds-gradient-gold">Nós</span>
+        </h2>
+
+        <div class="ds-anim-fadeup"
+          style="animation-delay: 0.3s; display:flex; flex-direction:column; gap:16px; font-family:'Inter', sans-serif; font-size:16px; color:var(--token-0a9a84c4-70a7-4ce1-a76e-6e1911018c59,#2a2b2fb3); line-height:160%;">
+          <p>Nossa clínica nasce do compromisso com a excelência, oferecendo tratamentos de alto padrão que unem
+            tecnologia avançada, técnicas atualizadas e uma abordagem personalizada. Cada detalhe foi cuidadosamente
+            pensado para proporcionar uma experiência exclusiva, confortável e acolhedora.</p>
+          <p>Nossa equipe é formada por profissionais qualificadas, que prezam pela precisão técnica, segurança e
+            resultados naturais:</p>
+          <ul style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:8px;">
+            <li
+              style="display:flex; align-items:center; gap:8px; color: var(--token-6d5be345-cf23-4856-a078-3221a9f6ead3, #2a2b2f);">
+              <span style="color:#C4A157; font-size:14px;">✦</span> <strong>Dra. Ana Paula Alves</strong> – COREN 007470
+            </li>
+            <li
+              style="display:flex; align-items:center; gap:8px; color: var(--token-6d5be345-cf23-4856-a078-3221a9f6ead3, #2a2b2f);">
+              <span style="color:#C4A157; font-size:14px;">✦</span> <strong>Dra. Andressa Pires</strong> – COREN 216580
+            </li>
+          </ul>
+          <p>Com sólida formação e constante atualização na área da estética, desenvolvemos protocolos individualizados
+            que respeitam as características únicas de cada paciente, sempre priorizando ética, responsabilidade e
+            excelência nos resultados.</p>
+          <p>Mais do que procedimentos estéticos, entregamos sofisticação, bem-estar e autoestima elevada.</p>
         </div>
-    </section> <!-- Contato Section --> <!-- Contato Section -->
-    <section class="contato" id="contato">
-        <div class="pai">
-            <div class="filho">
-                <div class="textos">
-                    <h2>Pronto para elevar sua <span class="text-gold">autoestima?</span></h2>
-                    <p>Entre em contato e descubra o tratamento ideal para você</p>
-                </div>
-                <div class="botoes"> <a href="https://wa.me/559284604242" target="_blank" class="btn-gold"> <svg
-                            width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                            <path
-                                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-                        </svg> <span class="btn-text">FALAR NO WHATSAPP</span> </a> <a
-                        href="https://www.instagram.com/apmedestetica/" target="_blank" class="btn-gold"> <svg
-                            width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
-                            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" />
-                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
-                        </svg> <span class="btn-text">FALAR NO INSTAGRAM</span> </a> </div>
+
+        <a href="https://api.whatsapp.com/send/?phone=559284604242&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" class="ds-btn ds-btn-primary ds-btn-lg ds-anim-fadeup"
+          style="margin-top:16px; animation-delay: 0.5s;">Agendar Avaliação</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="ds-divider"></div>
+  <section id="tratamentos" class="ds-section" style="max-width: 1300px; margin: 0 auto; padding: 120px 24px;">
+    <div style="text-align: center; margin-bottom: 64px;">
+      <div class="ds-tag quem-somos-badge"
+        style="font-size:12px;text-transform:uppercase;letter-spacing:0.1em;color:var(--token-73f2db1a-7507-497c-8ae8-8d245cb8f957,#C4A157);font-family: 'Inter', sans-serif; font-weight: 600; background: rgba(196, 161, 87, 0.1); border: 1px solid rgba(196, 161, 87, 0.2); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); margin-bottom: 16px;">
+        Faciais e Corporais</div>
+      <h2 class="ds-section-heading apmed-split-text"
+        style="font-family:'Playfair Display', serif; font-size: 48px; letter-spacing:-0.03em; margin-bottom: 0; color:var(--token-6d5be345-cf23-4856-a078-3221a9f6ead3,#2a2b2f);">
+        Nossos <span class="ds-gradient-gold">Procedimentos</span>
+      </h2>
+    </div>
+
+    <h3 class="ds-anim-fadeup"
+      style="font-family:'DM Sans', sans-serif; font-size: 32px; letter-spacing:-0.05em; color:var(--token-6d5be345-cf23-4856-a078-3221a9f6ead3,#2a2b2f); margin-bottom: 32px; border-bottom: 1px solid var(--token-6b5f02ce-77c5-459a-98a9-df47dd6bf4c9, #C4A1571f); padding-bottom: 16px;">
+      Faciais</h3>
+
+    <div class="ds-grid-demo ds-treatment-grid"
+      style="grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px; margin-bottom: 80px;">
+      <div class="ds-treatment-card"
+        style="display:flex; flex-direction:column; align-items:flex-start; padding: 32px; text-align: left; border: 1px solid var(--token-6b5f02ce-77c5-459a-98a9-df47dd6bf4c9, #C4A1571f);">
+        <div
+          style="font-family:'Playfair Display', serif; font-size: 40px; color:var(--token-73f2db1a-7507-497c-8ae8-8d245cb8f957,#C4A157); margin-bottom: 16px; line-height: 1;">
+          01</div>
+        <div
+          style="font-family:'Inter', sans-serif; font-size: 18px; font-weight: 600; color:var(--token-6d5be345-cf23-4856-a078-3221a9f6ead3,#2a2b2f); margin-bottom: 8px;">
+          Limpeza de Pele</div>
+        <div
+          style="font-family:'Inter', sans-serif; font-size: 14px; color:var(--token-0a9a84c4-70a7-4ce1-a76e-6e1911018c59,#2a2b2fb3); line-height: 150%;">
+          Higienização profunda, remoção de cravos e impurezas.</div>
+      </div>
+      <div class="ds-treatment-card"
+        style="display:flex; flex-direction:column; align-items:flex-start; padding: 32px; text-align: left; border: 1px solid var(--token-6b5f02ce-77c5-459a-98a9-df47dd6bf4c9, #C4A1571f);">
+        <div
+          style="font-family:'Playfair Display', serif; font-size: 40px; color:var(--token-73f2db1a-7507-497c-8ae8-8d245cb8f957,#C4A157); margin-bottom: 16px; line-height: 1;">
+          02</div>
+        <div
+          style="font-family:'Inter', sans-serif; font-size: 18px; font-weight: 600; color:var(--token-6d5be345-cf23-4856-a078-3221a9f6ead3,#2a2b2f); margin-bottom: 8px;">
+          Dermaplaning</div>
+        <div
+          style="font-family:'Inter', sans-serif; font-size: 14px; color:var(--token-0a9a84c4-70a7-4ce1-a76e-6e1911018c59,#2a2b2fb3); line-height: 150%;">
+          Esfoliação superficial para renovação da pele e melhor absorção de ativos.</div>
+      </div>
+      <div class="ds-treatment-card"
+        style="display:flex; flex-direction:column; align-items:flex-start; padding: 32px; text-align: left; border: 1px solid var(--token-6b5f02ce-77c5-459a-98a9-df47dd6bf4c9, #C4A1571f);">
+        <div
+          style="font-family:'Playfair Display', serif; font-size: 40px; color:var(--token-73f2db1a-7507-497c-8ae8-8d245cb8f957,#C4A157); margin-bottom: 16px; line-height: 1;">
+          03</div>
+        <div
+          style="font-family:'Inter', sans-serif; font-size: 18px; font-weight: 600; color:var(--token-6d5be345-cf23-4856-a078-3221a9f6ead3,#2a2b2f); margin-bottom: 8px;">
+          Microagulhamento</div>
+        <div
+          style="font-family:'Inter', sans-serif; font-size: 14px; color:var(--token-0a9a84c4-70a7-4ce1-a76e-6e1911018c59,#2a2b2fb3); line-height: 150%;">
+          Estímulo de colágeno, melhora de textura, manchas e cicatrizes.</div>
+      </div>
+      <div class="ds-treatment-card"
+        style="display:flex; flex-direction:column; align-items:flex-start; padding: 32px; text-align: left; border: 1px solid var(--token-6b5f02ce-77c5-459a-98a9-df47dd6bf4c9, #C4A1571f);">
+        <div
+          style="font-family:'Playfair Display', serif; font-size: 40px; color:var(--token-73f2db1a-7507-497c-8ae8-8d245cb8f957,#C4A157); margin-bottom: 16px; line-height: 1;">
+          04</div>
+        <div
+          style="font-family:'Inter', sans-serif; font-size: 18px; font-weight: 600; color:var(--token-6d5be345-cf23-4856-a078-3221a9f6ead3,#2a2b2f); margin-bottom: 8px;">
+          Toxina Botulínica</div>
+        <div
+          style="font-family:'Inter', sans-serif; font-size: 14px; color:var(--token-0a9a84c4-70a7-4ce1-a76e-6e1911018c59,#2a2b2fb3); line-height: 150%;">
+          Suavização de linhas de expressão e prevenção do envelhecimento.</div>
+      </div>
+      <div class="ds-treatment-card"
+        style="display:flex; flex-direction:column; align-items:flex-start; padding: 32px; text-align: left; border: 1px solid var(--token-6b5f02ce-77c5-459a-98a9-df47dd6bf4c9, #C4A1571f);">
+        <div
+          style="font-family:'Playfair Display', serif; font-size: 40px; color:var(--token-73f2db1a-7507-497c-8ae8-8d245cb8f957,#C4A157); margin-bottom: 16px; line-height: 1;">
+          05</div>
+        <div
+          style="font-family:'Inter', sans-serif; font-size: 18px; font-weight: 600; color:var(--token-6d5be345-cf23-4856-a078-3221a9f6ead3,#2a2b2f); margin-bottom: 8px;">
+          Fios de PDO</div>
+        <div
+          style="font-family:'Inter', sans-serif; font-size: 14px; color:var(--token-0a9a84c4-70a7-4ce1-a76e-6e1911018c59,#2a2b2fb3); line-height: 150%;">
+          Sustentação facial e estímulo de colágeno.</div>
+      </div>
+      <div class="ds-treatment-card"
+        style="display:flex; flex-direction:column; align-items:flex-start; padding: 32px; text-align: left; border: 1px solid var(--token-6b5f02ce-77c5-459a-98a9-df47dd6bf4c9, #C4A1571f);">
+        <div
+          style="font-family:'Playfair Display', serif; font-size: 40px; color:var(--token-73f2db1a-7507-497c-8ae8-8d245cb8f957,#C4A157); margin-bottom: 16px; line-height: 1;">
+          06</div>
+        <div
+          style="font-family:'Inter', sans-serif; font-size: 18px; font-weight: 600; color:var(--token-6d5be345-cf23-4856-a078-3221a9f6ead3,#2a2b2f); margin-bottom: 8px;">
+          Bioestimuladores</div>
+        <div
+          style="font-family:'Inter', sans-serif; font-size: 14px; color:var(--token-0a9a84c4-70a7-4ce1-a76e-6e1911018c59,#2a2b2fb3); line-height: 150%;">
+          Melhora da firmeza e qualidade da pele.</div>
+      </div>
+      <div class="ds-treatment-card"
+        style="display:flex; flex-direction:column; align-items:flex-start; padding: 32px; text-align: left; border: 1px solid var(--token-6b5f02ce-77c5-459a-98a9-df47dd6bf4c9, #C4A1571f);">
+        <div
+          style="font-family:'Playfair Display', serif; font-size: 40px; color:var(--token-73f2db1a-7507-497c-8ae8-8d245cb8f957,#C4A157); margin-bottom: 16px; line-height: 1;">
+          07</div>
+        <div
+          style="font-family:'Inter', sans-serif; font-size: 18px; font-weight: 600; color:var(--token-6d5be345-cf23-4856-a078-3221a9f6ead3,#2a2b2f); margin-bottom: 8px;">
+          Preenchimento Labial</div>
+        <div
+          style="font-family:'Inter', sans-serif; font-size: 14px; color:var(--token-0a9a84c4-70a7-4ce1-a76e-6e1911018c59,#2a2b2fb3); line-height: 150%;">
+          Volume, contorno e hidratação dos lábios.</div>
+      </div>
+      <div class="ds-treatment-card"
+        style="display:flex; flex-direction:column; align-items:flex-start; padding: 32px; text-align: left; border: 1px solid var(--token-6b5f02ce-77c5-459a-98a9-df47dd6bf4c9, #C4A1571f);">
+        <div
+          style="font-family:'Playfair Display', serif; font-size: 40px; color:var(--token-73f2db1a-7507-497c-8ae8-8d245cb8f957,#C4A157); margin-bottom: 16px; line-height: 1;">
+          08</div>
+        <div
+          style="font-family:'Inter', sans-serif; font-size: 18px; font-weight: 600; color:var(--token-6d5be345-cf23-4856-a078-3221a9f6ead3,#2a2b2f); margin-bottom: 8px;">
+          PRP - Terapia Regenerativa</div>
+        <div
+          style="font-family:'Inter', sans-serif; font-size: 14px; color:var(--token-0a9a84c4-70a7-4ce1-a76e-6e1911018c59,#2a2b2fb3); line-height: 150%;">
+          Rejuvenescimento com plasma rico em plaquetas.</div>
+      </div>
+      <div class="ds-treatment-card"
+        style="display:flex; flex-direction:column; align-items:flex-start; padding: 32px; text-align: left; border: 1px solid var(--token-6b5f02ce-77c5-459a-98a9-df47dd6bf4c9, #C4A1571f);">
+        <div
+          style="font-family:'Playfair Display', serif; font-size: 40px; color:var(--token-73f2db1a-7507-497c-8ae8-8d245cb8f957,#C4A157); margin-bottom: 16px; line-height: 1;">
+          09</div>
+        <div
+          style="font-family:'Inter', sans-serif; font-size: 18px; font-weight: 600; color:var(--token-6d5be345-cf23-4856-a078-3221a9f6ead3,#2a2b2f); margin-bottom: 8px;">
+          Retirada de Acrocordons</div>
+        <div
+          style="font-family:'Inter', sans-serif; font-size: 14px; color:var(--token-0a9a84c4-70a7-4ce1-a76e-6e1911018c59,#2a2b2fb3); line-height: 150%;">
+          Remoção de pequenas lesões benignas da pele.</div>
+      </div>
+    </div>
+
+    <h3 class="ds-anim-fadeup"
+      style="font-family:'DM Sans', sans-serif; font-size: 32px; letter-spacing:-0.05em; color:var(--token-6d5be345-cf23-4856-a078-3221a9f6ead3,#2a2b2f); margin-bottom: 32px; border-bottom: 1px solid var(--token-6b5f02ce-77c5-459a-98a9-df47dd6bf4c9, #C4A1571f); padding-bottom: 16px;">
+      Corporais</h3>
+
+    <div class="ds-grid-demo ds-treatment-grid"
+      style="grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px; margin-bottom: 64px;">
+      <div class="ds-treatment-card"
+        style="display:flex; flex-direction:column; align-items:flex-start; padding: 32px; text-align: left; border: 1px solid var(--token-6b5f02ce-77c5-459a-98a9-df47dd6bf4c9, #C4A1571f);">
+        <div
+          style="font-family:'Playfair Display', serif; font-size: 40px; color:var(--token-73f2db1a-7507-497c-8ae8-8d245cb8f957,#C4A157); margin-bottom: 16px; line-height: 1;">
+          01</div>
+        <div
+          style="font-family:'Inter', sans-serif; font-size: 18px; font-weight: 600; color:var(--token-6d5be345-cf23-4856-a078-3221a9f6ead3,#2a2b2f); margin-bottom: 8px;">
+          Ativos Redutores de Gordura</div>
+        <div
+          style="font-family:'Inter', sans-serif; font-size: 14px; color:var(--token-0a9a84c4-70a7-4ce1-a76e-6e1911018c59,#2a2b2fb3); line-height: 150%;">
+          Auxílio na redução de gordura localizada.</div>
+      </div>
+      <div class="ds-treatment-card"
+        style="display:flex; flex-direction:column; align-items:flex-start; padding: 32px; text-align: left; border: 1px solid var(--token-6b5f02ce-77c5-459a-98a9-df47dd6bf4c9, #C4A1571f);">
+        <div
+          style="font-family:'Playfair Display', serif; font-size: 40px; color:var(--token-73f2db1a-7507-497c-8ae8-8d245cb8f957,#C4A157); margin-bottom: 16px; line-height: 1;">
+          02</div>
+        <div
+          style="font-family:'Inter', sans-serif; font-size: 18px; font-weight: 600; color:var(--token-6d5be345-cf23-4856-a078-3221a9f6ead3,#2a2b2f); margin-bottom: 8px;">
+          Massagem Manual</div>
+        <div
+          style="font-family:'Inter', sans-serif; font-size: 14px; color:var(--token-0a9a84c4-70a7-4ce1-a76e-6e1911018c59,#2a2b2fb3); line-height: 150%;">
+          Relaxamento, ativação circulatória e modelagem corporal.</div>
+      </div>
+      <div class="ds-treatment-card"
+        style="display:flex; flex-direction:column; align-items:flex-start; padding: 32px; text-align: left; border: 1px solid var(--token-6b5f02ce-77c5-459a-98a9-df47dd6bf4c9, #C4A1571f);">
+        <div
+          style="font-family:'Playfair Display', serif; font-size: 40px; color:var(--token-73f2db1a-7507-497c-8ae8-8d245cb8f957,#C4A157); margin-bottom: 16px; line-height: 1;">
+          03</div>
+        <div
+          style="font-family:'Inter', sans-serif; font-size: 18px; font-weight: 600; color:var(--token-6d5be345-cf23-4856-a078-3221a9f6ead3,#2a2b2f); margin-bottom: 8px;">
+          Bioestimulador de Colágeno</div>
+        <div
+          style="font-family:'Inter', sans-serif; font-size: 14px; color:var(--token-0a9a84c4-70a7-4ce1-a76e-6e1911018c59,#2a2b2fb3); line-height: 150%;">
+          Tratamento de flacidez em áreas como abdômen, glúteos e braços.</div>
+      </div>
+      <div class="ds-treatment-card"
+        style="display:flex; flex-direction:column; align-items:flex-start; padding: 32px; text-align: left; border: 1px solid var(--token-6b5f02ce-77c5-459a-98a9-df47dd6bf4c9, #C4A1571f);">
+        <div
+          style="font-family:'Playfair Display', serif; font-size: 40px; color:var(--token-73f2db1a-7507-497c-8ae8-8d245cb8f957,#C4A157); margin-bottom: 16px; line-height: 1;">
+          04</div>
+        <div
+          style="font-family:'Inter', sans-serif; font-size: 18px; font-weight: 600; color:var(--token-6d5be345-cf23-4856-a078-3221a9f6ead3,#2a2b2f); margin-bottom: 8px;">
+          Preenchimento Trocantérica</div>
+        <div
+          style="font-family:'Inter', sans-serif; font-size: 14px; color:var(--token-0a9a84c4-70a7-4ce1-a76e-6e1911018c59,#2a2b2fb3); line-height: 150%;">
+          Correção do afundamento lateral do quadril.</div>
+      </div>
+      <div class="ds-treatment-card"
+        style="display:flex; flex-direction:column; align-items:flex-start; padding: 32px; text-align: left; border: 1px solid var(--token-6b5f02ce-77c5-459a-98a9-df47dd6bf4c9, #C4A1571f);">
+        <div
+          style="font-family:'Playfair Display', serif; font-size: 40px; color:var(--token-73f2db1a-7507-497c-8ae8-8d245cb8f957,#C4A157); margin-bottom: 16px; line-height: 1;">
+          05</div>
+        <div
+          style="font-family:'Inter', sans-serif; font-size: 18px; font-weight: 600; color:var(--token-6d5be345-cf23-4856-a078-3221a9f6ead3,#2a2b2f); margin-bottom: 8px;">
+          Harmonização Glútea</div>
+        <div
+          style="font-family:'Inter', sans-serif; font-size: 14px; color:var(--token-0a9a84c4-70a7-4ce1-a76e-6e1911018c59,#2a2b2fb3); line-height: 150%;">
+          Volume, contorno e projeção dos glúteos.</div>
+      </div>
+      <div class="ds-treatment-card"
+        style="display:flex; flex-direction:column; align-items:flex-start; padding: 32px; text-align: left; border: 1px solid var(--token-6b5f02ce-77c5-459a-98a9-df47dd6bf4c9, #C4A1571f);">
+        <div
+          style="font-family:'Playfair Display', serif; font-size: 40px; color:var(--token-73f2db1a-7507-497c-8ae8-8d245cb8f957,#C4A157); margin-bottom: 16px; line-height: 1;">
+          06</div>
+        <div
+          style="font-family:'Inter', sans-serif; font-size: 18px; font-weight: 600; color:var(--token-6d5be345-cf23-4856-a078-3221a9f6ead3,#2a2b2f); margin-bottom: 8px;">
+          Tratamento para Estrias e Flacidez</div>
+        <div
+          style="font-family:'Inter', sans-serif; font-size: 14px; color:var(--token-0a9a84c4-70a7-4ce1-a76e-6e1911018c59,#2a2b2fb3); line-height: 150%;">
+          Melhora da textura e firmeza da pele.</div>
+      </div>
+      <div class="ds-treatment-card"
+        style="display:flex; flex-direction:column; align-items:flex-start; padding: 32px; text-align: left; border: 1px solid var(--token-6b5f02ce-77c5-459a-98a9-df47dd6bf4c9, #C4A1571f);">
+        <div
+          style="font-family:'Playfair Display', serif; font-size: 40px; color:var(--token-73f2db1a-7507-497c-8ae8-8d245cb8f957,#C4A157); margin-bottom: 16px; line-height: 1;">
+          07</div>
+        <div
+          style="font-family:'Inter', sans-serif; font-size: 18px; font-weight: 600; color:var(--token-6d5be345-cf23-4856-a078-3221a9f6ead3,#2a2b2f); margin-bottom: 8px;">
+          PEIM (Microvasos)</div>
+        <div
+          style="font-family:'Inter', sans-serif; font-size: 14px; color:var(--token-0a9a84c4-70a7-4ce1-a76e-6e1911018c59,#2a2b2fb3); line-height: 150%;">
+          Tratamento de vasinhos aparentes.</div>
+      </div>
+      <a href="https://api.whatsapp.com/send/?phone=559284604242&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" class="ds-treatment-card"
+        style="display:flex; flex-direction:column; align-items:center; justify-content:center; padding: 32px; text-align: center; background: linear-gradient(135deg, #E6C875 0%, #C4A157 100%); border: none; text-decoration: none; cursor: pointer;">
+        <h3
+          style="font-family:'Playfair Display', serif; font-size: 28px; letter-spacing:-0.03em; color:#fff; margin-bottom: 0; line-height: 1.2;">
+          Quer saber qual procedimento é ideal para <span style="font-style: italic; color:#2a2b2f;">você?</span></h3>
+        <div
+          style="font-family:'Inter', sans-serif; font-size: 14px; font-weight: 600; color:var(--token-6d5be345-cf23-4856-a078-3221a9f6ead3,#2a2b2f); margin-top: 24px; display:flex; align-items:center; gap: 6px; letter-spacing: 0.02em; border-bottom: 1px solid rgba(42,43,47,0.3); padding-bottom: 2px;">
+          Clique para agendar <span style="font-size: 16px;">&rarr;</span></div>
+      </a>
+    </div>
+  </section>
+
+  <section id="clinica" class="ds-section"
+    style="background-color: var(--token-880f89e1-36c9-4265-a2f4-20ec3d5bd7ce, #fef9ef); padding-top: 120px; padding-bottom: 120px;">
+    <div class="ds-clinic-grid">
+
+      <div style="display: flex; flex-direction: column; align-items: flex-start; text-align: left;">
+        <div class="quem-somos-badge ds-anim-fadeup"
+          style="display: inline-flex; align-items: center; justify-content: center; padding: 6px 16px; border-radius: 50px; font-size:12px;text-transform:uppercase;letter-spacing:0.1em;color:var(--token-73f2db1a-7507-497c-8ae8-8d245cb8f957,#C4A157);font-family: 'Inter', sans-serif; font-weight: 600; background: rgba(196, 161, 87, 0.1); border: 1px solid rgba(196, 161, 87, 0.2); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); margin-bottom: 24px;">
+          Nossa Clínica</div>
+        <h2 class="ds-anim-fadeup apmed-split-text"
+          style="font-family: 'Playfair Display', serif; font-size: 48px; font-weight: 400; color: var(--token-6d5be345-cf23-4856-a078-3221a9f6ead3, #2a2b2f); letter-spacing: -0.03em; line-height: 110%; margin-bottom: 16px; animation-delay: 0.1s;">
+          Conheça a <br />
+          <span class="ds-gradient-gold" style="font-style: italic;">Apmed Estética</span>
+        </h2>
+        <p class="ds-anim-fadeup"
+          style="font-family: 'Inter', sans-serif; font-size: 16px; color: var(--token-0a9a84c4-70a7-4ce1-a76e-6e1911018c59, #2a2b2fb3); line-height: 160%; margin-bottom: 48px; max-width: 480px; animation-delay: 0.2s;">
+          Um espaço pensado para o seu bem-estar, com estrutura completa e ambiente acolhedor para você se sentir em
+          casa.
+        </p>
+
+        <div class="ds-clinic-features" style="margin-top: 24px;">
+          <div class="ds-anim-fadeup"
+            style="animation-delay: 0.3s; display: flex; flex-direction: row; align-items: flex-start; gap: 24px;">
+            <div
+              style="flex-shrink: 0; width: 56px; height: 56px; border-radius: 50%; background: var(--token-6b5f02ce-77c5-459a-98a9-df47dd6bf4c9, #C4A1571f); display: flex; align-items: center; justify-content: center; color: var(--token-73f2db1a-7507-497c-8ae8-8d245cb8f957, #C4A157);">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="12 2 2 7 12 12 22 7 12 2" />
+                <polyline points="2 17 12 22 22 17" />
+                <polyline points="2 12 12 17 22 12" />
+              </svg>
             </div>
+            <div style="display: flex; flex-direction: column;">
+              <h4
+                style="font-family: 'DM Sans', sans-serif; font-size: 20px; font-weight: 600; color: var(--token-6d5be345-cf23-4856-a078-3221a9f6ead3, #2a2b2f); margin: 0 0 8px 0;">
+                Tecnologia de Ponta</h4>
+              <p
+                style="font-family: 'Inter', sans-serif; font-size: 15px; color: var(--token-0a9a84c4-70a7-4ce1-a76e-6e1911018c59, #2a2b2fb3); line-height: 160%; margin: 0;">
+                Equipamentos modernos para resultados superiores</p>
+            </div>
+          </div>
+          <div class="ds-anim-fadeup"
+            style="animation-delay: 0.4s; display: flex; flex-direction: row; align-items: flex-start; gap: 24px;">
+            <div
+              style="flex-shrink: 0; width: 56px; height: 56px; border-radius: 50%; background: var(--token-6b5f02ce-77c5-459a-98a9-df47dd6bf4c9, #C4A1571f); display: flex; align-items: center; justify-content: center; color: var(--token-73f2db1a-7507-497c-8ae8-8d245cb8f957, #C4A157);">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M20.42 4.58a5.4 5.4 0 0 0-7.65 0l-.77.78-.77-.78a5.4 5.4 0 0 0-7.65 0C1.46 6.7 1.33 10.28 4 13l8 8 8-8c2.67-2.72 2.54-6.3.42-8.42z" />
+              </svg>
+            </div>
+            <div style="display: flex; flex-direction: column;">
+              <h4
+                style="font-family: 'DM Sans', sans-serif; font-size: 20px; font-weight: 600; color: var(--token-6d5be345-cf23-4856-a078-3221a9f6ead3, #2a2b2f); margin: 0 0 8px 0;">
+                Ambiente Acolhedor</h4>
+              <p
+                style="font-family: 'Inter', sans-serif; font-size: 15px; color: var(--token-0a9a84c4-70a7-4ce1-a76e-6e1911018c59, #2a2b2fb3); line-height: 160%; margin: 0;">
+                Conforto e tranquilidade em cada detalhe</p>
+            </div>
+          </div>
+          <div class="ds-anim-fadeup"
+            style="animation-delay: 0.5s; display: flex; flex-direction: row; align-items: flex-start; gap: 24px;">
+            <div
+              style="flex-shrink: 0; width: 56px; height: 56px; border-radius: 50%; background: var(--token-6b5f02ce-77c5-459a-98a9-df47dd6bf4c9, #C4A1571f); display: flex; align-items: center; justify-content: center; color: var(--token-73f2db1a-7507-497c-8ae8-8d245cb8f957, #C4A157);">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                <circle cx="9" cy="7" r="4" />
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+              </svg>
+            </div>
+            <div style="display: flex; flex-direction: column;">
+              <h4
+                style="font-family: 'DM Sans', sans-serif; font-size: 20px; font-weight: 600; color: var(--token-6d5be345-cf23-4856-a078-3221a9f6ead3, #2a2b2f); margin: 0 0 8px 0;">
+                Profissionais Qualificados</h4>
+              <p
+                style="font-family: 'Inter', sans-serif; font-size: 15px; color: var(--token-0a9a84c4-70a7-4ce1-a76e-6e1911018c59, #2a2b2fb3); line-height: 160%; margin: 0;">
+                Equipe especializada e em constante atualização</p>
+            </div>
+          </div>
+          <div class="ds-anim-fadeup"
+            style="animation-delay: 0.6s; display: flex; flex-direction: row; align-items: flex-start; gap: 24px;">
+            <div
+              style="flex-shrink: 0; width: 56px; height: 56px; border-radius: 50%; background: var(--token-6b5f02ce-77c5-459a-98a9-df47dd6bf4c9, #C4A1571f); display: flex; align-items: center; justify-content: center; color: var(--token-73f2db1a-7507-497c-8ae8-8d245cb8f957, #C4A157);">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <polygon
+                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+              </svg>
+            </div>
+            <div style="display: flex; flex-direction: column;">
+              <h4
+                style="font-family: 'DM Sans', sans-serif; font-size: 20px; font-weight: 600; color: var(--token-6d5be345-cf23-4856-a078-3221a9f6ead3, #2a2b2f); margin: 0 0 8px 0;">
+                Atendimento Personalizado</h4>
+              <p
+                style="font-family: 'Inter', sans-serif; font-size: 15px; color: var(--token-0a9a84c4-70a7-4ce1-a76e-6e1911018c59, #2a2b2fb3); line-height: 160%; margin: 0;">
+                Cada tratamento adaptado às suas necessidades</p>
+            </div>
+          </div>
         </div>
-    </section> <!-- Rodape -->
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-logo-col"> <img src="/.netlify/images?url=/apmed-estetica/imagens/logo.png" alt="">
-                <div class="footer-social"> <a href="https://wa.me/559284604242" target="_blank"
-                        class="footer-social-link" aria-label="WhatsApp"> <svg width="18" height="18"
-                            viewBox="0 0 24 24" fill="currentColor">
-                            <path
-                                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-                        </svg> </a> <a href="https://instagram.com/apmedstetica" target="_blank"
-                        class="footer-social-link" aria-label="Instagram"> <svg width="18" height="18"
-                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
-                            stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
-                            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" />
-                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
-                        </svg> </a> </div>
-            </div>
-            <div class="footer-col-pages">
-                <h4 class="footer-heading">Páginas</h4> <a href="#" class="footer-link">Início</a> <a href="#sobre"
-                    class="footer-link">Sobre</a> <a href="#procedimentos" class="footer-link">Procedimentos</a> <a
-                    href="#clinica" class="footer-link">Clínica</a> <a href="#contato" class="footer-link">Contato</a>
-            </div>
-            <div class="footer-col-contact">
-                <h4 class="footer-heading">Contatos</h4> <a href="https://wa.me/559284604242" target="_blank"
-                    class="footer-contact-item"> <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                        <path
-                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-                    </svg> <span>WhatsApp</span> </a> <a href="https://www.instagram.com/apmedestetica/" target="_blank"
-                    class="footer-contact-item"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
-                        <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" />
-                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
-                    </svg> <span>Instagram</span> </a>
-            </div>
-            <div class="footer-col-location">
-                <h4 class="footer-heading">Localização</h4>
-                <div class="footer-address-wrapper">
-                    <div class="footer-social-link footer-address-icon">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                            <circle cx="12" cy="10" r="3"></circle>
-                        </svg>
-                    </div>
-                    <p class="footer-address">Av. Jornalista Umberto Calderaro, 1169<br>Sala 11, Manaus, Brazil</p>
-                </div>
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.054365738876!2d-60.00687692525166!3d-3.080126340232468!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x926c1a8d07062409%3A0xe546736780c3022!2sAv.+Jornalista+Umberto+Calderaro+Filho%2C+1169+-+Adrian%C3%B3polis%2C+Manaus+-+AM%2C+69057-015!5e0!3m2!1spt-BR!2sbr!4v1697200000000!5m2!1spt-BR!2sbr"
-                    class="footer-map" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
-            </div>
+
+        <a href="https://www.google.com/maps/place/Apmed+Est%C3%A9tica+Avan%C3%A7ada/@-3.0971988,-60.0147773,17z/data=!3m1!4b1!4m16!1m9!4m8!1m0!1m6!1m2!1s0x926c1b5814233fd5:0x9a1b4cef456b557d!2sApmed+Est%C3%A9tica+Avan%C3%A7ada,+Centro+Comercial+Blanco+Mall+-+Av.+Umberto+Calderaro,+1169+-+sala+11+-+Adrian%C3%B3polis,+Manaus+-+AM,+69057-015!2m2!1d-60.0099064!2d-3.0972042!3m5!1s0x926c1b5814233fd5:0x9a1b4cef456b557d!8m2!3d-3.0972042!4d-60.0099064!16s%2Fg%2F11z4_dsn_m?entry=ttu&g_ep=EgoyMDI2MDYyNC4wIKXMDSoASAFQAw%3D%3D"
+          target="_blank" rel="noopener noreferrer" class="ds-anim-fadeup"
+          style="animation-delay: 0.7s; display: flex; align-items: center; gap: 20px; margin-top: 32px; padding: 20px 24px; border-radius: 16px; background: rgba(196, 161, 87, 0.06); border: 1px solid rgba(196, 161, 87, 0.15); text-decoration: none; transition: all 0.3s ease; cursor: pointer; width: 100%; box-sizing: border-box;"
+          onmouseover="this.style.background='rgba(196, 161, 87, 0.12)'; this.style.borderColor='rgba(196, 161, 87, 0.35)'; this.style.transform='translateY(-2px)'; this.style.boxShadow='0 8px 24px rgba(196, 161, 87, 0.1)';"
+          onmouseout="this.style.background='rgba(196, 161, 87, 0.06)'; this.style.borderColor='rgba(196, 161, 87, 0.15)'; this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+          <div
+            style="flex-shrink: 0; width: 48px; height: 48px; border-radius: 50%; background: var(--token-6b5f02ce-77c5-459a-98a9-df47dd6bf4c9, #C4A1571f); display: flex; align-items: center; justify-content: center; color: var(--token-73f2db1a-7507-497c-8ae8-8d245cb8f957, #C4A157);">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 4px; flex: 1; min-width: 0;">
+            <span
+              style="font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 600; color: var(--token-6d5be345-cf23-4856-a078-3221a9f6ead3, #2a2b2f);">Como
+              Chegar</span>
+            <span
+              style="font-family: 'Inter', sans-serif; font-size: 13px; color: var(--token-0a9a84c4-70a7-4ce1-a76e-6e1911018c59, #2a2b2fb3); line-height: 150%;">Blanco
+              Mall — Av. Umberto Calderaro, 1169, Sala 11</span>
+          </div>
+          <div style="flex-shrink: 0; color: var(--token-73f2db1a-7507-497c-8ae8-8d245cb8f957, #C4A157);">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="9 18 15 12 9 6" />
+            </svg>
+          </div>
+        </a>
+
+      </div>
+
+      <style>
+        .clinicSwiper {
+          width: 100%;
+          max-width: 440px;
+          aspect-ratio: 4/5;
+        }
+
+        .clinicSwiper .swiper-slide {
+          border-radius: 24px;
+          overflow: hidden;
+          background-color: #fff;
+          box-shadow: 0 16px 32px rgba(0, 0, 0, 0.1);
+        }
+      </style>
+
+      <div class="swiper clinicSwiper ds-anim-fadeup" style="animation-delay: 0.4s;">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="assets/1.webp" alt="Tecnologia Apmed Estética"
+              style="width: 100%; height: 100%; object-fit: cover;" loading="lazy" />
+          </div>
+          <div class="swiper-slide">
+            <img src="assets/5.webp" alt="Estrutura Apmed Estética"
+              style="width: 100%; height: 100%; object-fit: cover;" loading="lazy" />
+          </div>
+          <div class="swiper-slide">
+            <img src="assets/8.webp" alt="Conforto Apmed Estética" style="width: 100%; height: 100%; object-fit: cover;"
+              loading="lazy" />
+          </div>
+          <div class="swiper-slide">
+            <img src="assets/2.webp" alt="Profissionais Apmed Estética"
+              style="width: 100%; height: 100%; object-fit: cover;" loading="lazy" />
+          </div>
+          <div class="swiper-slide">
+            <img src="assets/6.webp" alt="Ambiente Apmed Estética" style="width: 100%; height: 100%; object-fit: cover;"
+              loading="lazy" />
+          </div>
+          <div class="swiper-slide">
+            <img src="assets/10.webp" alt="Detalhes Apmed Estética"
+              style="width: 100%; height: 100%; object-fit: cover;" loading="lazy" />
+          </div>
         </div>
-    </footer>
-    <div class="subfooter">
-        <p>2026 Apmed Estética | Todos os direitos reservados | Feito por Luis Motta</p>
-    </div> <!-- Scroll to Top --> <button class="scroll-top" id="scrollTop" aria-label="Voltar ao topo"> <svg width="20"
-            height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
-            stroke-linejoin="round">
-            <polyline points="18 15 12 9 6 15" />
-        </svg> </button> <!-- Scripts -->
-    <!-- Scripts -->
-    <script src="/apmed-estetica/script.js" defer></script>
+      </div>
+
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          if (typeof Swiper !== 'undefined') {
+            new Swiper(".clinicSwiper", {
+              effect: "cards",
+              grabCursor: true,
+              autoplay: {
+                delay: 2000,
+                disableOnInteraction: false,
+              },
+              loop: true,
+            });
+          }
+        });
+      </script>
+
+    </div>
+  </section>
+
+  <section id="contato"
+    style="position: relative; padding: 120px 24px; text-align: center; overflow: hidden; background: linear-gradient(180deg, var(--token-17a2dfab-f614-4252-a228-6d2e25e2f234, #faf8f4) 0%, #f3efe7 100%);">
+
+    <div
+      style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 800px; height: 800px; background: radial-gradient(circle, rgba(196, 161, 87, 0.06) 0%, transparent 70%); pointer-events: none;">
+    </div>
+    <div
+      style="position: absolute; top: 30%; left: 20%; width: 300px; height: 300px; background: radial-gradient(circle, rgba(196, 161, 87, 0.04) 0%, transparent 70%); pointer-events: none;">
+    </div>
+    <div
+      style="position: absolute; bottom: 20%; right: 15%; width: 250px; height: 250px; background: radial-gradient(circle, rgba(196, 161, 87, 0.05) 0%, transparent 70%); pointer-events: none;">
+    </div>
+
+    <div
+      style="position: relative; z-index: 1; max-width: 1000px; margin: 0 auto; background: rgba(255, 255, 255, 0.5); backdrop-filter: blur(32px); -webkit-backdrop-filter: blur(32px); border-radius: 36px; border: 1px solid #C4A157; box-shadow: 0 32px 64px rgba(0,0,0,0.05); padding: clamp(40px, 8vw, 80px) clamp(24px, 5vw, 64px); overflow: hidden;">
+
+      <h2 class="ds-anim-fadeup apmed-split-text"
+        style="font-family: 'Playfair Display', serif; font-size: clamp(32px, 8vw, 52px); font-weight: 400; color: var(--token-6d5be345-cf23-4856-a078-3221a9f6ead3, #2a2b2f); line-height: 120%; margin: 0 0 20px 0; white-space: normal;">
+        Pronto para elevar sua <span class="ds-gradient-gold-alt">autoestima</span>?
+      </h2>
+
+
+      <p class="ds-anim-fadeup"
+        style="animation-delay: 0.1s; font-family: 'Inter', sans-serif; font-size: 18px; color: var(--token-0a9a84c4-70a7-4ce1-a76e-6e1911018c59, #2a2b2fb3); line-height: 170%; margin: 0 auto 52px; max-width: 520px;">
+        Entre em contato e descubra o tratamento ideal para você
+      </p>
+
+      <div class="ds-anim-fadeup"
+        style="animation-delay: 0.2s; display: flex; justify-content: center; gap: 24px; flex-wrap: wrap;">
+
+        <!-- WhatsApp Button -->
+        <a href="https://api.whatsapp.com/send/?phone=559284604242&text&type=phone_number&app_absent=0" target="_blank"
+          rel="noopener noreferrer"
+          style="display: inline-flex; align-items: center; gap: 12px; padding: 18px 40px; border-radius: 60px; background: linear-gradient(135deg, #C4A157 0%, #D4B76A 50%, #C4A157 100%); color: #fff; font-family: 'Inter', sans-serif; font-size: 16px; font-weight: 600; text-decoration: none; letter-spacing: 0.02em; box-shadow: 0 8px 24px rgba(196, 161, 87, 0.3); transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1); cursor: pointer;"
+          onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 16px 40px rgba(196, 161, 87, 0.4)';"
+          onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 24px rgba(196, 161, 87, 0.3)';">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+          </svg>
+          WhatsApp
+        </a>
+
+        <!-- Instagram Button -->
+        <a href="https://www.instagram.com/apmedestetica/" target="_blank" rel="noopener noreferrer"
+          style="display: inline-flex; align-items: center; gap: 12px; padding: 18px 40px; border-radius: 60px; background: linear-gradient(135deg, #C4A157 0%, #D4B76A 50%, #C4A157 100%); color: #fff; font-family: 'Inter', sans-serif; font-size: 16px; font-weight: 600; text-decoration: none; letter-spacing: 0.02em; box-shadow: 0 8px 24px rgba(196, 161, 87, 0.3); transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1); cursor: pointer;"
+          onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 16px 40px rgba(196, 161, 87, 0.4)';"
+          onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 24px rgba(196, 161, 87, 0.3)';">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+          </svg>
+          Instagram
+        </a>
+
+      </div>
+
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       FOOTER — Inspired by Helora
+       ═══════════════════════════════════════════════════════════ -->
+  <style>
+    .apmed-footer {
+      position: relative;
+      background: linear-gradient(180deg, #4a3c1e 0%, #2e2512 100%);
+      padding: 80px 24px 40px;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .apmed-footer::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.12'/%3E%3C/svg%3E");
+      background-repeat: repeat;
+      background-size: 150px 150px;
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.5;
+    }
+
+    .apmed-footer>* {
+      position: relative;
+      z-index: 1;
+    }
+
+    .apmed-footer-nav {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-bottom: 60px;
+      flex-wrap: wrap;
+    }
+
+    .apmed-footer-nav a {
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.6);
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      transition: color 0.3s ease;
+    }
+
+    .apmed-footer-nav a:hover {
+      color: #C4A157;
+    }
+
+    .apmed-footer-marquee-wrapper {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      margin-bottom: 60px;
+      mask-image: linear-gradient(90deg, transparent, black 10%, black 90%, transparent);
+      -webkit-mask-image: linear-gradient(90deg, transparent, black 10%, black 90%, transparent);
+    }
+
+    .apmed-footer-marquee {
+      display: flex;
+      white-space: nowrap;
+      animation: footerMarquee 12s linear infinite;
+    }
+
+    .apmed-footer-marquee span {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(80px, 12vw, 160px);
+      font-weight: 400;
+      background: linear-gradient(180deg, rgba(196, 161, 87, 0.1) 0%, rgba(196, 161, 87, 0.03) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      padding-right: 80px;
+      letter-spacing: 0.04em;
+      user-select: none;
+    }
+
+    @media (max-width: 809px) {
+      .apmed-footer-marquee {
+        animation-duration: 6s;
+      }
+    }
+
+    @keyframes footerMarquee {
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+    .apmed-footer-divider {
+      width: 100%;
+      max-width: 1300px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(196, 161, 87, 0.25), transparent);
+      margin: 0 auto 32px;
+    }
+
+    .apmed-footer-copyright {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.4);
+      letter-spacing: 0.02em;
+    }
+
+    .apmed-footer-copyright a {
+      color: rgba(196, 161, 87, 0.7);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .apmed-footer-copyright a:hover {
+      color: #C4A157;
+    }
+  </style>
+
+  <footer class="apmed-footer">
+    <!-- Footer Nav -->
+    <nav class="apmed-footer-nav">
+      <a href="#hero">Início</a>
+      <a href="#sobre-nos">Sobre Nós</a>
+      <a href="#tratamentos">Tratamentos</a>
+      <a href="#clinica">Clínica</a>
+      <a href="#contato">Contato</a>
+    </nav>
+
+    <!-- Infinite Marquee -->
+    <div class="apmed-footer-marquee-wrapper">
+      <div class="apmed-footer-marquee">
+        <span>AP MED ESTÉTICA</span>
+        <span>AP MED ESTÉTICA</span>
+        <span>AP MED ESTÉTICA</span>
+        <span>AP MED ESTÉTICA</span>
+        <span>AP MED ESTÉTICA</span>
+        <span>AP MED ESTÉTICA</span>
+      </div>
+    </div>
+
+    <!-- Divider -->
+    <div class="apmed-footer-divider"></div>
+
+    <!-- Social Icons -->
+    <div style="display: flex; justify-content: center; gap: 24px; margin-bottom: 28px;">
+      <a href="https://www.instagram.com/apmedestetica/" target="_blank" rel="noopener noreferrer"
+        style="width: 44px; height: 44px; border-radius: 50%; border: 1px solid rgba(196, 161, 87, 0.3); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.5); text-decoration: none; transition: all 0.3s ease;"
+        onmouseover="this.style.color='#C4A157'; this.style.borderColor='rgba(196, 161, 87, 0.7)'; this.style.transform='translateY(-2px)';"
+        onmouseout="this.style.color='rgba(255,255,255,0.5)'; this.style.borderColor='rgba(196, 161, 87, 0.3)'; this.style.transform='translateY(0)';">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+          <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+        </svg>
+      </a>
+      <a href="https://api.whatsapp.com/send/?phone=559284604242&text&type=phone_number&app_absent=0" target="_blank"
+        rel="noopener noreferrer"
+        style="width: 44px; height: 44px; border-radius: 50%; border: 1px solid rgba(196, 161, 87, 0.3); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.5); text-decoration: none; transition: all 0.3s ease;"
+        onmouseover="this.style.color='#C4A157'; this.style.borderColor='rgba(196, 161, 87, 0.7)'; this.style.transform='translateY(-2px)';"
+        onmouseout="this.style.color='rgba(255,255,255,0.5)'; this.style.borderColor='rgba(196, 161, 87, 0.3)'; this.style.transform='translateY(0)';">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+          <path
+            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+        </svg>
+      </a>
+    </div>
+
+    <!-- Copyright -->
+    <p class="apmed-footer-copyright">
+      © 2026 Ap Med Estética. Feito por <a href="#">Luis Motta</a>
+    </p>
+  </footer>
+
+  <!-- Script for BorderGlow Animation on Cards -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const cards = document.querySelectorAll('.ds-motion-card');
+
+      cards.forEach(card => {
+        // Add edge-light for outer glow if it doesn't exist
+        if (!card.querySelector('.edge-light')) {
+          const edgeLight = document.createElement('span');
+          edgeLight.className = 'edge-light';
+          card.appendChild(edgeLight);
+        }
+
+        const getCenterOfElement = (el) => {
+          const rect = el.getBoundingClientRect();
+          return [rect.width / 2, rect.height / 2];
+        };
+
+        const getEdgeProximity = (el, x, y) => {
+          const [cx, cy] = getCenterOfElement(el);
+          const dx = x - cx;
+          const dy = y - cy;
+          let kx = Infinity;
+          let ky = Infinity;
+          if (dx !== 0) kx = cx / Math.abs(dx);
+          if (dy !== 0) ky = cy / Math.abs(dy);
+          return Math.min(Math.max(1 / Math.min(kx, ky), 0), 1);
+        };
+
+        const getCursorAngle = (el, x, y) => {
+          const [cx, cy] = getCenterOfElement(el);
+          const dx = x - cx;
+          const dy = y - cy;
+          if (dx === 0 && dy === 0) return 0;
+          const radians = Math.atan2(dy, dx);
+          let degrees = radians * (180 / Math.PI) + 90;
+          if (degrees < 0) degrees += 360;
+          return degrees;
+        };
+
+        card.addEventListener('pointermove', (e) => {
+          const rect = card.getBoundingClientRect();
+          const x = e.clientX - rect.left;
+          const y = e.clientY - rect.top;
+
+          const edge = getEdgeProximity(card, x, y);
+          const angle = getCursorAngle(card, x, y);
+
+          card.style.setProperty('--edge-proximity', `${(edge * 100).toFixed(3)}`);
+          card.style.setProperty('--cursor-angle', `${angle.toFixed(3)}deg`);
+        });
+
+        // Optional: Reset on mouse leave if you want it to hide when leaving fast
+        card.addEventListener('pointerleave', () => {
+          card.style.setProperty('--edge-proximity', '0');
+        });
+      });
+    });
+  </script>
+  <!-- Navbar & Mobile Menu Logic -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const pill = document.getElementById('nav-options-pill');
+      const heroSection = document.getElementById('hero');
+      const mobileBtn = document.getElementById('mobile-menu-btn');
+      const mobileOverlay = document.getElementById('mobile-menu-overlay');
+      const mobileLinks = document.querySelectorAll('.ds-mobile-link');
+      let menuOpen = false;
+
+      // Scroll logic for navbar
+      if (heroSection) {
+        window.addEventListener('scroll', () => {
+          if (window.scrollY > heroSection.offsetHeight - 80) {
+            if (pill) pill.classList.add('nav-scrolled');
+            if (mobileBtn && !menuOpen) mobileBtn.classList.add('nav-scrolled');
+          } else {
+            if (pill) pill.classList.remove('nav-scrolled');
+            if (mobileBtn && !menuOpen) mobileBtn.classList.remove('nav-scrolled');
+          }
+        });
+      }
+
+      // Mobile Menu Toggle
+      const closeBtn = document.getElementById('mobile-menu-close-btn');
+
+      if (mobileBtn && mobileOverlay) {
+        const closeMenu = () => {
+          menuOpen = false;
+          mobileOverlay.classList.remove('active');
+          if (window.scrollY > heroSection.offsetHeight - 80) {
+            mobileBtn.classList.add('nav-scrolled');
+          }
+        };
+
+        mobileBtn.addEventListener('click', () => {
+          menuOpen = true;
+          mobileOverlay.classList.add('active');
+          mobileBtn.classList.remove('nav-scrolled');
+        });
+
+        if (closeBtn) {
+          closeBtn.addEventListener('click', closeMenu);
+        }
+
+        // Close menu on link click
+        mobileLinks.forEach(link => {
+          link.addEventListener('click', closeMenu);
+        });
+      }
+    });
+  </script>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       GSAP & SplitType Animation Logic
+       ═══════════════════════════════════════════════════════════ -->
+  <script src="https://unpkg.com/split-type"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1/dist/lenis.min.js"></script>
+  <style>
+    /* Gradient classes to prevent inline style attribute rewriting bugs */
+    .ds-gradient-hero {
+      background: linear-gradient(135deg, #ffffff 0%, #ffffff 45%, #E6C875 80%, #C4A157 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
+    }
+    .ds-gradient-gold {
+      background: linear-gradient(135deg, #E6C875 0%, #C4A157 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
+    }
+    .ds-gradient-gold-alt {
+      background: linear-gradient(135deg, #C4A157 0%, #E6C875 50%, #C4A157 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
+    }
+
+    /* Fix for gradient text + SplitType WebKit bugs */
+    .apmed-split-text .char {
+      display: inline-block;
+      position: relative;
+    }
+  </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      if (typeof gsap !== 'undefined' && typeof SplitType !== 'undefined') {
+        gsap.registerPlugin(ScrollTrigger);
+
+        // ── Lenis Smooth Scroll (buttery) ──
+        const lenis = new Lenis({
+          duration: 1.8,
+          easing: (t) => 1 - Math.pow(1 - t, 4),
+          orientation: 'vertical',
+          gestureOrientation: 'vertical',
+          smoothWheel: true,
+          wheelMultiplier: 0.8,
+          touchMultiplier: 1.5,
+        });
+
+        // Connect Lenis to GSAP ScrollTrigger
+        lenis.on('scroll', ScrollTrigger.update);
+        gsap.ticker.add((time) => {
+          lenis.raf(time * 1000);
+        });
+        gsap.ticker.lagSmoothing(0);
+
+        // Make all anchor links use Lenis smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+          anchor.addEventListener('click', (e) => {
+            e.preventDefault();
+            const target = anchor.getAttribute('href');
+            if (target && target !== '#') {
+              lenis.scrollTo(target, { offset: 0 });
+            }
+          });
+        });
+
+        const splitElements = document.querySelectorAll('.apmed-split-text');
+
+        splitElements.forEach(el => {
+          // Initialize SplitType
+          const text = new SplitType(el, { types: 'chars, words' });
+
+          // --- SAFARI & CHROMIUM GRADIENT SLICE FIX ---
+          // Prevent browser compositing bugs by applying gradient directly to each char
+          text.chars.forEach(char => {
+            const gradientParent = char.closest('.ds-gradient-hero, .ds-gradient-gold, .ds-gradient-gold-alt');
+            if (gradientParent) {
+              const computed = getComputedStyle(gradientParent);
+              const bg = computed.backgroundImage !== 'none' ? computed.backgroundImage : computed.background;
+              
+              if (bg && bg !== 'none' && bg !== '') {
+                const parentRect = gradientParent.getBoundingClientRect();
+                const charRect = char.getBoundingClientRect();
+                
+                const pWidth = parentRect.width || 800;
+                const pHeight = parentRect.height || 100;
+                
+                const x = charRect.left - parentRect.left;
+                const y = charRect.top - parentRect.top;
+                
+                char.style.backgroundImage = bg;
+                char.style.backgroundSize = `${pWidth}px ${pHeight}px`;
+                char.style.backgroundPosition = `-${x}px -${y}px`;
+                char.style.webkitBackgroundClip = 'text';
+                char.style.webkitTextFillColor = 'transparent';
+                
+                gradientParent.dataset.cleanGradient = 'true';
+              }
+            }
+          });
+          
+          document.querySelectorAll('[data-clean-gradient="true"]').forEach(parent => {
+            parent.style.webkitBackgroundClip = 'initial';
+            parent.style.webkitTextFillColor = 'initial';
+            parent.style.backgroundImage = 'none';
+            parent.style.background = 'transparent';
+            parent.removeAttribute('data-clean-gradient');
+          });
+          // ------------------------------------------
+
+          // Animate characters
+          gsap.from(text.chars, {
+            opacity: 0,
+            top: 40,
+            duration: 1.25,
+            ease: "power3.out",
+            stagger: 0.05,
+            scrollTrigger: {
+              trigger: el,
+              start: "top 85%", // Trigger when top of element hits 85% of viewport
+              once: true
+            }
+          });
+        });
+
+        // Add scroll animations to all other elements with .ds-anim-fadeup
+        const fadeElements = document.querySelectorAll('.ds-anim-fadeup');
+        fadeElements.forEach(el => {
+          ScrollTrigger.create({
+            trigger: el,
+            start: "top 90%", // Trigger slightly before it comes into view
+            onEnter: () => el.classList.add('is-visible'),
+            once: true
+          });
+        });
+
+        // Staggered treatment card animations — batched for mobile & desktop
+        ScrollTrigger.batch('.ds-treatment-card', {
+          start: "top 85%",
+          once: true,
+          onEnter: (elements) => {
+            gsap.to(elements, {
+              opacity: 1,
+              y: 0,
+              filter: 'blur(0px)',
+              duration: 1,
+              stagger: 0.15,
+              ease: "power3.out",
+            });
+          }
+        });
+
+        // Hero Entrance Timeline
+        const heroTl = gsap.timeline();
+
+        // Image scales down and fades in (no y-translation to avoid empty gaps)
+        heroTl.from("#hero-bg-img", {
+          scale: 1.15,
+          opacity: 0,
+          duration: 2.5,
+          ease: "power2.out",
+          transformOrigin: "center center"
+        }, 0)
+          // Navbar drops from top
+          .from("#hero-navbar", {
+            y: -100,
+            opacity: 0,
+            duration: 1.2,
+            ease: "power3.out"
+          }, 0.4)
+          // Badge fades in
+          .from(".ds-hero-badge", {
+            opacity: 0,
+            y: 20,
+            duration: 0.8,
+            ease: "power2.out"
+          }, 0.8)
+          // Subheading
+          .from(".ds-hero-subheading", {
+            opacity: 0,
+            y: 20,
+            duration: 0.8,
+            ease: "power2.out"
+          }, 1.2)
+          // Buttons
+          .from(".ds-hero-buttons", {
+            opacity: 0,
+            y: 20,
+            duration: 0.8,
+            ease: "power2.out"
+          }, 1.4)
+          // Spotlight Card
+          .from("#hero-spotlight-card", {
+            opacity: 0,
+            y: 40,
+            duration: 1.2,
+            ease: "back.out(1.5)",
+            clearProps: "all"
+          }, 1.6);
+      }
+    });
+  </script>
 </body>
 
 </html>
