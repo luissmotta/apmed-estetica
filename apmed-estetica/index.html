@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
@@ -1258,22 +1258,29 @@
       position: relative;
       z-index: 101;
     }
+
     .ds-mobile-menu-btn svg {
       transition: color 0.4s ease;
       color: var(--token-880f89e1-36c9-4265-a2f4-20ec3d5bd7ce, #fef9ef);
     }
+
     .ds-mobile-menu-btn.nav-scrolled {
       background: linear-gradient(135deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.1) 100%);
       backdrop-filter: blur(24px) saturate(180%) contrast(110%);
       -webkit-backdrop-filter: blur(24px) saturate(180%) contrast(110%);
       box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.8), inset 0 -1px 1px rgba(255, 255, 255, 0.3);
     }
+
     .ds-mobile-menu-btn.nav-scrolled svg {
       color: var(--token-6d5be345-cf23-4856-a078-3221a9f6ead3, #2a2b2f);
     }
+
     .ds-mobile-overlay {
       position: fixed;
-      top: 0; left: 0; width: 100%; height: 100vh;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
       background: rgba(42, 43, 47, 0.95);
       backdrop-filter: blur(24px) saturate(180%);
       -webkit-backdrop-filter: blur(24px) saturate(180%);
@@ -1287,10 +1294,12 @@
       align-items: center;
       gap: 32px;
     }
+
     .ds-mobile-overlay.active {
       opacity: 1;
       pointer-events: auto;
     }
+
     .ds-mobile-link {
       font-family: 'Playfair Display', serif;
       font-size: 32px;
@@ -1301,17 +1310,36 @@
       transform: translateY(20px);
       opacity: 0;
     }
+
     .ds-mobile-overlay.active .ds-mobile-link {
       transform: translateY(0);
       opacity: 1;
       transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     }
-    .ds-mobile-overlay.active .ds-mobile-link:nth-child(1) { transition-delay: 0.1s; }
-    .ds-mobile-overlay.active .ds-mobile-link:nth-child(2) { transition-delay: 0.15s; }
-    .ds-mobile-overlay.active .ds-mobile-link:nth-child(3) { transition-delay: 0.2s; }
-    .ds-mobile-overlay.active .ds-mobile-link:nth-child(4) { transition-delay: 0.25s; }
-    .ds-mobile-overlay.active .ds-mobile-link:nth-child(5) { transition-delay: 0.3s; }
-    .ds-mobile-overlay.active .ds-mobile-link:nth-child(6) { transition-delay: 0.35s; }
+
+    .ds-mobile-overlay.active .ds-mobile-link:nth-child(1) {
+      transition-delay: 0.1s;
+    }
+
+    .ds-mobile-overlay.active .ds-mobile-link:nth-child(2) {
+      transition-delay: 0.15s;
+    }
+
+    .ds-mobile-overlay.active .ds-mobile-link:nth-child(3) {
+      transition-delay: 0.2s;
+    }
+
+    .ds-mobile-overlay.active .ds-mobile-link:nth-child(4) {
+      transition-delay: 0.25s;
+    }
+
+    .ds-mobile-overlay.active .ds-mobile-link:nth-child(5) {
+      transition-delay: 0.3s;
+    }
+
+    .ds-mobile-overlay.active .ds-mobile-link:nth-child(6) {
+      transition-delay: 0.35s;
+    }
 
     /* Responsive */
     @media (max-width: 809px) {
@@ -1321,18 +1349,24 @@
         justify-content: space-between !important;
         align-items: center !important;
       }
+
       .ds-hero-overlay {
-        background: linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.85) 100%) !important;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.85) 100%) !important;
       }
+
       .ds-section {
         padding: 40px 20px;
       }
-      .ds-navbar-links, .ds-desktop-only {
+
+      .ds-navbar-links,
+      .ds-desktop-only {
         display: none !important;
       }
+
       .ds-mobile-menu-btn {
         display: flex;
       }
+
       .ds-hero-heading {
         font-size: clamp(32px, 8.5vw, 42px) !important;
         white-space: normal !important;
@@ -1340,6 +1374,7 @@
         max-width: 100% !important;
         text-align: center;
       }
+
       .ds-hero-subheading {
         text-align: center;
         margin: 16px auto 0 !important;
@@ -1347,16 +1382,20 @@
         line-height: 1.5 !important;
         max-width: 100% !important;
       }
+
       .ds-hero-text-col {
         align-items: center;
         text-align: center;
       }
+
       .ds-hero-buttons {
-        flex-direction: column-reverse; /* Primary on top */
+        flex-direction: column-reverse;
+        /* Primary on top */
         width: 100%;
         gap: 12px;
         margin-top: 24px;
       }
+
       .ds-hero-buttons .ds-btn {
         width: 100%;
         text-align: center;
@@ -1364,6 +1403,7 @@
         padding: 16px 24px;
         font-size: 16px;
       }
+
       .ds-hero-card-col {
         display: flex;
         justify-content: center;
@@ -1371,37 +1411,46 @@
         margin-top: 16px;
         margin-left: 0 !important;
       }
+
       #hero-spotlight-card {
         width: auto;
         max-width: 100%;
       }
+
       .ds-hero-stats {
         flex-direction: column;
         gap: 24px;
       }
+
       .ds-type-row {
         flex-direction: column;
         gap: 8px;
       }
+
       .ds-type-label {
         flex: none;
       }
+
       .ds-type-spec {
         text-align: left;
       }
+
       .ds-swatches {
         grid-template-columns: repeat(2, 1fr);
       }
+
       .ds-hero-content {
         padding: 100px 20px 40px;
         flex-direction: column;
         justify-content: center;
         gap: 32px;
       }
+
       .ds-clinic-grid {
         grid-template-columns: 1fr;
         gap: 32px;
       }
+
       .ds-clinic-features {
         grid-template-columns: 1fr;
       }
@@ -1614,9 +1663,12 @@
             </div>
           </div>
           <div style="display:flex;justify-self:end;align-items:center;gap:16px;">
-            <a href="https://api.whatsapp.com/send/?phone=559284604242&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" class="ds-btn ds-btn-primary ds-btn-xs ds-desktop-only">Agendar Avaliação</a>
+            <a href="https://api.whatsapp.com/send/?phone=559284604242&text&type=phone_number&app_absent=0"
+              target="_blank" rel="noopener noreferrer" class="ds-btn ds-btn-primary ds-btn-xs ds-desktop-only">Agendar
+              Avaliação</a>
             <button id="mobile-menu-btn" class="ds-mobile-menu-btn">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
                 <line x1="3" y1="12" x2="21" y2="12"></line>
                 <line x1="3" y1="6" x2="21" y2="6"></line>
                 <line x1="3" y1="18" x2="21" y2="18"></line>
@@ -1628,8 +1680,10 @@
 
       <!-- MOBILE MENU OVERLAY -->
       <div id="mobile-menu-overlay" class="ds-mobile-overlay">
-        <button id="mobile-menu-close-btn" style="position: absolute; top: 24px; right: 20px; background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2); cursor: pointer; padding: 12px; border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 102; transition: all 0.3s ease;">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <button id="mobile-menu-close-btn"
+          style="position: absolute; top: 24px; right: 20px; background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2); cursor: pointer; padding: 12px; border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 102; transition: all 0.3s ease;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
             <line x1="18" y1="6" x2="6" y2="18"></line>
             <line x1="6" y1="6" x2="18" y2="18"></line>
           </svg>
@@ -1639,7 +1693,10 @@
         <a href="#tratamentos" class="ds-mobile-link">Tratamentos</a>
         <a href="#clinica" class="ds-mobile-link">Clínica</a>
         <a href="#contato" class="ds-mobile-link">Contato</a>
-        <a href="https://api.whatsapp.com/send/?phone=559284604242&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" class="ds-btn ds-btn-primary ds-mobile-link" style="margin-top: 16px; width: 200px; text-align: center; justify-content: center; font-family: 'Inter', sans-serif; font-size: 16px;">Agendar Avaliação</a>
+        <a href="https://api.whatsapp.com/send/?phone=559284604242&text&type=phone_number&app_absent=0" target="_blank"
+          rel="noopener noreferrer" class="ds-btn ds-btn-primary ds-mobile-link"
+          style="margin-top: 16px; width: 200px; text-align: center; justify-content: center; font-family: 'Inter', sans-serif; font-size: 16px;">Agendar
+          Avaliação</a>
       </div>
 
       <div class="ds-hero-content">
@@ -1648,7 +1705,8 @@
             <p>Estética Avançada</p>
           </div>
           <div>
-            <h1 class="ds-hero-heading apmed-split-text ds-gradient-hero" style="max-width: 800px; white-space: nowrap;">
+            <h1 class="ds-hero-heading apmed-split-text ds-gradient-hero"
+              style="max-width: 800px; white-space: nowrap;">
               Sua melhor versão<br>começa aqui.</h1>
             <p class="ds-hero-subheading" style="margin-top:16px;">
               Especialistas em estética avançada para realçar sua beleza natural com segurança e tecnologia.
@@ -1656,7 +1714,8 @@
           </div>
           <div class="ds-hero-buttons">
             <a href="#tratamentos" class="ds-btn ds-btn-secondary">Nossos Tratamentos</a>
-            <a href="https://api.whatsapp.com/send/?phone=559284604242&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" class="ds-btn ds-btn-primary">Agende sua Avaliação</a>
+            <a href="https://api.whatsapp.com/send/?phone=559284604242&text&type=phone_number&app_absent=0"
+              target="_blank" rel="noopener noreferrer" class="ds-btn ds-btn-primary">Agende sua Avaliação</a>
           </div>
         </div>
 
@@ -1757,7 +1816,8 @@
           <p>Mais do que procedimentos estéticos, entregamos sofisticação, bem-estar e autoestima elevada.</p>
         </div>
 
-        <a href="https://api.whatsapp.com/send/?phone=559284604242&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" class="ds-btn ds-btn-primary ds-btn-lg ds-anim-fadeup"
+        <a href="https://api.whatsapp.com/send/?phone=559284604242&text&type=phone_number&app_absent=0" target="_blank"
+          rel="noopener noreferrer" class="ds-btn ds-btn-primary ds-btn-lg ds-anim-fadeup"
           style="margin-top:16px; animation-delay: 0.5s;">Agendar Avaliação</a>
       </div>
     </div>
@@ -1981,7 +2041,8 @@
           style="font-family:'Inter', sans-serif; font-size: 14px; color:var(--token-0a9a84c4-70a7-4ce1-a76e-6e1911018c59,#2a2b2fb3); line-height: 150%;">
           Tratamento de vasinhos aparentes.</div>
       </div>
-      <a href="https://api.whatsapp.com/send/?phone=559284604242&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" class="ds-treatment-card"
+      <a href="https://api.whatsapp.com/send/?phone=559284604242&text&type=phone_number&app_absent=0" target="_blank"
+        rel="noopener noreferrer" class="ds-treatment-card"
         style="display:flex; flex-direction:column; align-items:center; justify-content:center; padding: 32px; text-align: center; background: linear-gradient(135deg, #E6C875 0%, #C4A157 100%); border: none; text-decoration: none; cursor: pointer;">
         <h3
           style="font-family:'Playfair Display', serif; font-size: 28px; letter-spacing:-0.03em; color:#fff; margin-bottom: 0; line-height: 1.2;">
@@ -2317,6 +2378,7 @@
     .apmed-footer-marquee {
       display: flex;
       white-space: nowrap;
+      width: max-content;
       animation: footerMarquee 12s linear infinite;
     }
 
@@ -2333,12 +2395,6 @@
       user-select: none;
     }
 
-    @media (max-width: 809px) {
-      .apmed-footer-marquee {
-        animation-duration: 6s;
-      }
-    }
-
     @keyframes footerMarquee {
       0% {
         transform: translateX(0);
@@ -2346,6 +2402,12 @@
 
       100% {
         transform: translateX(-50%);
+      }
+    }
+
+    @media (max-width: 809px) {
+      .apmed-footer-marquee {
+        animation-duration: 15s;
       }
     }
 
@@ -2558,12 +2620,14 @@
       -webkit-text-fill-color: transparent;
       display: inline-block;
     }
+
     .ds-gradient-gold {
       background: linear-gradient(135deg, #E6C875 0%, #C4A157 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       display: inline-block;
     }
+
     .ds-gradient-gold-alt {
       background: linear-gradient(135deg, #C4A157 0%, #E6C875 50%, #C4A157 100%);
       -webkit-background-clip: text;
@@ -2624,28 +2688,28 @@
             if (gradientParent) {
               const computed = getComputedStyle(gradientParent);
               const bg = computed.backgroundImage !== 'none' ? computed.backgroundImage : computed.background;
-              
+
               if (bg && bg !== 'none' && bg !== '') {
                 const parentRect = gradientParent.getBoundingClientRect();
                 const charRect = char.getBoundingClientRect();
-                
+
                 const pWidth = parentRect.width || 800;
                 const pHeight = parentRect.height || 100;
-                
+
                 const x = charRect.left - parentRect.left;
                 const y = charRect.top - parentRect.top;
-                
+
                 char.style.backgroundImage = bg;
                 char.style.backgroundSize = `${pWidth}px ${pHeight}px`;
                 char.style.backgroundPosition = `-${x}px -${y}px`;
                 char.style.webkitBackgroundClip = 'text';
                 char.style.webkitTextFillColor = 'transparent';
-                
+
                 gradientParent.dataset.cleanGradient = 'true';
               }
             }
           });
-          
+
           document.querySelectorAll('[data-clean-gradient="true"]').forEach(parent => {
             parent.style.webkitBackgroundClip = 'initial';
             parent.style.webkitTextFillColor = 'initial';
