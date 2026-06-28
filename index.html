@@ -935,9 +935,13 @@
       transition: none;
     }
 
-    .ds-treatment-card:hover {
-      transform: none;
-      box-shadow: none;
+    .ds-treatment-card.hover-ready {
+      transition: all 0.3s ease;
+    }
+
+    .ds-treatment-card.hover-ready:hover {
+      transform: translateY(-8px) !important;
+      box-shadow: 0 12px 32px rgba(196, 161, 87, 0.15);
     }
 
     .ds-treatment-card>.edge-light {
@@ -2756,6 +2760,9 @@
               duration: 1,
               stagger: 0.15,
               ease: "power3.out",
+              onComplete: () => {
+                elements.forEach(el => el.classList.add('hover-ready'));
+              }
             });
           }
         });
